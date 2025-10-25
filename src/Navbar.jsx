@@ -3,7 +3,7 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { IoTriangle } from "react-icons/io5";
 function Navbar() {
   return (
-    <div className=" flex justify-between items-center w-full text-white border-b border-white pb-4 ">
+    <div className=" flex justify-between items-center w-full text-white border-b border-white pb-4 pt-3">
       <div className="flex  gap-1">
         <span className="text-xl"><IoTriangle className="w-full h-full"/></span>
         <p>Sakshi Tanwar</p>

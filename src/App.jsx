@@ -5,15 +5,18 @@ import RecentWork from './RecentWork'
 import Trusted from './Trusted'
 import Footer from './Footer'
 import Cards from './Cards'
-import { motion } from 'motion/react'
-import butterfly from "../public/butterfly.png"
-import Butter from './Butter'
+import ThreeBackground from './ThreeBackground'
 function App() {
   return (
-    <div className='bg-black  flex flex-col items-center py-5 overflow-x-hidden'>
-      <div className='w-6xl '>
-        <Navbar></Navbar>
-        <Hero></Hero>
+    <div className='bg-black flex flex-col items-center pb-5 overflow-x-hidden'>
+      <div className='w-6xl'>
+        <div className='relative'>
+          <ThreeBackground />
+          <div className='relative z-10'>
+            <Navbar></Navbar>
+            <Hero></Hero>
+          </div>
+        </div>
         <RecentWork></RecentWork>
         <Trusted></Trusted>
         <Cards></Cards>

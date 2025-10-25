@@ -5,7 +5,7 @@ function Trusted() {
   return (
     <div className="py-10 border-t border-white">
       <div className="w-full pt-5 pb-15 flex flex-col items-center mt-10 text-white gap-5 mb-4 bg-neutral-950 border-white/10 border rounded-3xl">
-        <div className="text-3xl">Trusted by product teams</div>
+        <div className="text-3xl font-semibold">Trusted by product teams</div>
         <div>From seed-stage startups to enterprise platform groups.</div>
 
         {/* Parent container with overflow-hidden */}

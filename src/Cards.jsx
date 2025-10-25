@@ -14,7 +14,7 @@ function Cards() {
         opacity:1
       }}
       viewport={{
-         once: true, amount: 0.3
+         once: false, amount: 0.1
       }}
       transition={{
         duration:0.4
@@ -61,7 +61,7 @@ function Cards() {
         opacity:1
       }}
       viewport={{
-         once: true, amount: 0.3
+         once: false, amount: 0.1
       }}
       transition={{
         duration:0.4
@@ -106,7 +106,7 @@ function Cards() {
         opacity:1
       }}
       viewport={{
-         once: true, amount: 0.3
+         once: false, amount: 0.1
       }}
       transition={{
         duration:0.4
