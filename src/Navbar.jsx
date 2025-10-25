@@ -6,7 +6,7 @@ function Navbar() {
     <div className=" flex justify-between items-center w-full text-white border-b border-white pb-4 pt-3">
       <div className="flex  gap-1">
         <span className="text-xl"><IoTriangle className="w-full h-full"/></span>
-        <p>Sakshi Tanwar</p>
+        <p>Sakshi Kanwar</p>
       </div>
       <div className="flex gap-5">
         <span>Work</span>
