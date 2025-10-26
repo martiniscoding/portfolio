@@ -35,13 +35,13 @@ function Hero() {
           build fast, reliable LLM apps.
         </div>
         <div className="pt-4 flex gap-5 border-b pb-10">
-          <button className="bg-white rounded-xl px-4 py-2 flex gap-1 text-black items-center">
+          <button className="bg-white rounded-4xl px-4 py-2 flex gap-1 text-black items-center">
             <span className="size-4">
-              <FaArrowRight className="w-full h-full size-2" />
+              <FaArrowRight className="w-full h-full size-2 text-neutral-700" />
             </span>
             <span>View Work</span>
           </button>
-          <button className="bg-white/50 rounded-xl px-4 py-2 flex gap-1 text-black">
+          <button className="bg-white/50 rounded-4xl px-4 py-2 flex gap-1 text-black">
             <span className="text-lg">
               <CiMail className="w-full h-full" />
             </span>

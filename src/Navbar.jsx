@@ -2,11 +2,22 @@ import React from "react";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { IoTriangle } from "react-icons/io5";
 import { useScroll } from "./ScrollContext";
+import { motion } from "motion/react";
 
 function Navbar() {
    const { scrollTo, aboutRef, projectsRef,workRef } = useScroll();
   return (
-    <div className=" flex justify-between items-center w-full text-white border-b border-white pb-4 pt-3">
+    <motion.div
+    initial={
+      {
+      y:-200
+    }
+    }
+    animate={{
+      y:0
+    }}
+    
+     className=" flex justify-between items-center w-full text-white border-b border-white pb-4 pt-3">
       <div className="flex  gap-1">
         <span className="text-xl"><IoTriangle className="w-full h-full"/></span>
         <p>Sakshi Kanwar</p>
@@ -26,7 +37,7 @@ function Navbar() {
         <span className="text-xl"><MdOutlineFileDownload className="w-full h-full text-white "/></span>
         <span>Resume</span>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
