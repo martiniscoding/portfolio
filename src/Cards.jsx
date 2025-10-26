@@ -1,9 +1,12 @@
 import React from "react";
 import { GoNorthStar } from "react-icons/go";
 import { motion } from "motion/react";
+import { useScroll } from "./ScrollContext";
 function Cards() {
+    const {aboutRef, projectsRef, workRef } = useScroll();
+
   return (
-    <div className="motion-translate-x-in-[200%] motion-translate-y-in-[0%] w-full flex justify-between gap-1 px-4 py-10 border-t border-b border-neutral-600  text-white">
+    <div ref={workRef} className="motion-translate-x-in-[200%] motion-translate-y-in-[0%] w-full flex justify-between gap-1 px-4 py-10 border-t border-b border-neutral-600  text-white">
       <motion.div
       initial={{
         y:200,

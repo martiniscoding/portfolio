@@ -7,9 +7,11 @@ import { FiGithub } from "react-icons/fi";
 import { CiGlobe } from "react-icons/ci";
 import { IoLogoLinkedin } from "react-icons/io";
 import { motion } from "motion/react";
+import { useScroll } from "./ScrollContext";
 function Footer() {
+  const {aboutRef, projectsRef, workRef } = useScroll();
   return (
-   <div className="pt-10 ">
+   <div className="pt-10 " ref={aboutRef}>
      <motion.div
      
       className="w-full relative  rounded-3xl border border-white/10 bg-neutral-950 text-white p-6 ">

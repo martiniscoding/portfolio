@@ -1,133 +1,236 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
-import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader.js";
+import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
-import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
 
 export default function ThreeBackground() {
   const mountRef = useRef(null);
 
   useEffect(() => {
-    if (!mountRef.current) {
-      return undefined;
-    }
+    const container = mountRef.current;
+    if (!container) return;
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 100);
-    camera.position.z = 8;
+    scene.fog = new THREE.FogExp2(0x05040a, 0.08);
 
-    const getDimensions = () => {
-      const el = mountRef.current;
-      if (!el) {
-        return { width: window.innerWidth, height: window.innerHeight };
-      }
-      const { width, height } = el.getBoundingClientRect();
-      return {
-        width: Math.max(1, width),
-        height: Math.max(1, height),
-      };
-    };
+    const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 100);
+    camera.position.set(0, 0, 5);
+    camera.lookAt(0, 0, 0);
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.outputColorSpace = THREE.SRGBColorSpace;
-    mountRef.current.appendChild(renderer.domElement);
-
-    const { width: initialWidth, height: initialHeight } = getDimensions();
-    camera.aspect = initialWidth / initialHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(initialWidth, initialHeight);
-
-    const ambient = new THREE.AmbientLight(0xffffff, 0.6);
-    scene.add(ambient);
-    const key = new THREE.DirectionalLight(0xff77ff, 2);
-    key.position.set(3, 3, 5);
-    scene.add(key);
-    const rim = new THREE.DirectionalLight(0x8844ff, 1.5);
-    rim.position.set(-4, -3, -3);
-    scene.add(rim);
-
-    const rgbeLoader = new RGBELoader();
-    rgbeLoader.load(
-      "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_small_03_1k.hdr",
-      (texture) => {
-        texture.mapping = THREE.EquirectangularReflectionMapping;
-        scene.environment = texture;
-      }
-    );
-
-    const geometry = new THREE.TorusKnotGeometry(1.3, 0.4, 220, 32);
-    const material = new THREE.MeshPhysicalMaterial({
-      color: 0x9b5cf6,
-      metalness: 0.5,
-      roughness: 0.1,
-      clearcoat: 1.0,
-      clearcoatRoughness: 0.05,
-      envMapIntensity: 1.5,
-      emissive: new THREE.Color(0x9b5cf6),
-      emissiveIntensity: 0.6,
+    renderer.toneMappingExposure = 1.0;
+    Object.assign(renderer.domElement.style, {
+      position: "absolute",
+      top: "0",
+      left: "0",
+      width: "100%",
+      height: "100%",
+      pointerEvents: "none",
     });
-    const mesh = new THREE.Mesh(geometry, material);
-    scene.add(mesh);
+    container.appendChild(renderer.domElement);
 
     const composer = new EffectComposer(renderer);
-    composer.addPass(new RenderPass(scene, camera));
-    const bloom = new UnrealBloomPass(
-      new THREE.Vector2(initialWidth, initialHeight),
-      1.3,
-      0.6,
-      0.1
+    const renderPass = new RenderPass(scene, camera);
+    const bloomPass = new UnrealBloomPass(
+      new THREE.Vector2(window.innerWidth, window.innerHeight),
+      0.8,
+      0.5,
+      0.0
     );
-    composer.addPass(bloom);
-    composer.setSize(initialWidth, initialHeight);
+    composer.addPass(renderPass);
+    composer.addPass(bloomPass);
 
-    const mouse = { x: 0, y: 0 };
-    const onMouseMove = (e) => {
-      mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
-      mouse.y = (e.clientY / window.innerHeight) * 2 - 1;
+ 
+    const points = [];
+    const radius = 2.0;
+    const segments = 300;
+    for (let i = 0; i <= segments; i++) {
+      const t = (i / segments) * Math.PI * 2;
+      const x = Math.cos(t) * radius;
+      const z = Math.sin(t) * radius;
+      const y = 0.35 * Math.sin(t * 3.5) + 0.2 * Math.sin(t * 7.5);
+      const rOffset =
+        0.25 * Math.sin(t * 2.3) * Math.cos(t * 1.7 + 0.8) +
+        0.12 * Math.sin(t * 6.0 + 1.3);
+      points.push(
+        new THREE.Vector3(
+          x + rOffset * Math.cos(t),
+          y,
+          z + rOffset * Math.sin(t)
+        )
+      );
+    }
+    const curve = new THREE.CatmullRomCurve3(points, true);
+    const geometry = new THREE.TubeGeometry(curve, 1200, 0.15, 48, true);
+
+    const uniforms = {
+      uTime: { value: 0 },
+      uColor: { value: new THREE.Color(0xd77bff) },
+      uLightDir: { value: new THREE.Vector3(0, 0, 1) },
     };
-    window.addEventListener("mousemove", onMouseMove);
+
+    const material = new THREE.ShaderMaterial({
+      uniforms,
+      vertexShader: `
+        uniform float uTime;
+        varying vec3 vNormal;
+        varying vec3 vPos;
+        varying vec2 vUv;
+        void main() {
+          vUv = uv;
+          vNormal = normalMatrix * normal;
+          vec3 pos = position + normal * sin((position.y + uTime) * 3.0) * 0.06;
+          vPos = (modelMatrix * vec4(pos, 1.0)).xyz;
+          gl_Position = projectionMatrix * viewMatrix * vec4(vPos, 1.0);
+        }
+      `,
+      fragmentShader: `
+        uniform vec3 uColor;
+        uniform vec3 uLightDir;
+        varying vec3 vNormal;
+        varying vec3 vPos;
+        varying vec2 vUv;
+
+        float hash(vec2 p) {
+          return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
+        }
+        float noise(vec2 p) {
+          vec2 i = floor(p);
+          vec2 f = fract(p);
+          float a = hash(i);
+          float b = hash(i + vec2(1.0, 0.0));
+          float c = hash(i + vec2(0.0, 1.0));
+          float d = hash(i + vec2(1.0, 1.0));
+          vec2 u = f * f * (3.0 - 2.0 * f);
+          return mix(a, b, u.x) +
+                 (c - a) * u.y * (1.0 - u.x) +
+                 (d - b) * u.x * u.y;
+        }
+
+        void main() {
+          vec3 N = normalize(vNormal);
+          vec3 L = normalize(uLightDir);
+          vec3 V = normalize(cameraPosition - vPos);
+          float diff = max(dot(N, L), 0.0);
+          float rim = pow(1.0 - dot(N, V), 2.5);
+
+          float n = noise(vUv * 14.0 + vPos.xy * 0.1);
+          float roughMask = smoothstep(0.3, 0.8, n);
+          float surface = mix(0.25, 1.0, roughMask);
+
+          vec3 color = uColor * (0.4 + diff * 0.8 + rim * 1.2) * surface;
+          gl_FragColor = vec4(color, 1.0);
+        }
+      `,
+    });
+
+    const tube = new THREE.Mesh(geometry, material);
+    tube.rotation.x = Math.PI / 2;
+    scene.add(tube);
+
+    
+    const starGeom = new THREE.BufferGeometry();
+    const starCount = 600;
+    const starPos = new Float32Array(starCount * 3);
+    for (let i = 0; i < starCount; i++) {
+      const r = 20 * Math.random();
+      const phi = Math.random() * 2 * Math.PI;
+      const cost = Math.random() * 2 - 1;
+      const sint = Math.sqrt(1 - cost * cost);
+      starPos[i * 3] = r * sint * Math.cos(phi);
+      starPos[i * 3 + 1] = r * sint * Math.sin(phi);
+      starPos[i * 3 + 2] = r * cost;
+    }
+    starGeom.setAttribute("position", new THREE.BufferAttribute(starPos, 3));
+    const stars = new THREE.Points(
+      starGeom,
+      new THREE.PointsMaterial({
+        color: 0x9c77ff,
+        size: 0.02,
+        opacity: 0.35,
+        transparent: true,
+      })
+    );
+    scene.add(stars);
 
     const clock = new THREE.Clock();
-    const animate = () => {
-      requestAnimationFrame(animate);
+
+    const updateSize = () => {
+      const { width, height } = container.getBoundingClientRect();
+      const safeWidth = width || window.innerWidth;
+      const safeHeight = height || window.innerHeight;
+
+      if (safeWidth < 640) {
+        camera.position.z = 8;
+        tube.scale.set(0.7, 0.7, 0.7);
+      } else if (safeWidth < 1024) {
+        camera.position.z = 6.5;
+        tube.scale.set(0.85, 0.85, 0.85);
+      } else {
+        camera.position.z = 5;
+        tube.scale.set(1, 1, 1);
+      }
+
+      renderer.setSize(safeWidth, safeHeight, false);
+      composer.setSize(safeWidth, safeHeight);
+      bloomPass.setSize(safeWidth, safeHeight);
+
+      camera.aspect = safeWidth / safeHeight;
+      camera.updateProjectionMatrix();
+    };
+
+    updateSize();
+    const handleResize = () => updateSize();
+    window.addEventListener("resize", handleResize);
+
+    const resizeObserver =
+      typeof ResizeObserver !== "undefined"
+        ? new ResizeObserver(() => updateSize())
+        : null;
+    if (resizeObserver) resizeObserver.observe(container);
+
+    const mouse = new THREE.Vector2(0, 0);
+    const targetBloom = { strength: 0.8 };
+    const currentBloom = { strength: 0.8 };
+
+    const handleMouseMove = (event) => {
+      const rect = container.getBoundingClientRect();
+      mouse.x = (event.clientX - rect.width / 2) / rect.width;
+      mouse.y = (event.clientY - rect.height / 2) / rect.height;
+
+      
+      const distance = Math.sqrt(mouse.x * mouse.x + mouse.y * mouse.y);
+      const glowBoost = 1.0 + (1.0 - Math.min(distance * 2, 1.0)) * 0.8; 
+      targetBloom.strength = 0.8 * glowBoost;
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    
+    function animate() {
       const t = clock.getElapsedTime();
+      uniforms.uTime.value = t * 0.6;
 
-      mesh.rotation.y += (mouse.x * 0.6 - mesh.rotation.y) * 0.05;
-      mesh.rotation.x += (-mouse.y * 0.4 - mesh.rotation.x) * 0.05;
-      mesh.rotation.y += Math.sin(t * 0.3) * 0.002;
-      mesh.rotation.x += Math.cos(t * 0.2) * 0.002;
-
-      camera.position.x += (mouse.x * 0.5 - camera.position.x) * 0.05;
-      camera.position.y += (-mouse.y * 0.3 - camera.position.y) * 0.05;
-      camera.lookAt(0, 0, 0);
+      
+      currentBloom.strength +=
+        (targetBloom.strength - currentBloom.strength) * 0.05;
+      bloomPass.strength = currentBloom.strength;
 
       composer.render();
-    };
-    animate();
-
-    const resizeScene = () => {
-      const { width, height } = getDimensions();
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
-      renderer.setSize(width, height);
-      composer.setSize(width, height);
-    };
-    resizeScene();
-    window.addEventListener("resize", resizeScene);
-    let resizeObserver;
-    if (typeof ResizeObserver !== "undefined") {
-      resizeObserver = new ResizeObserver(() => resizeScene());
-      resizeObserver.observe(mountRef.current);
+      requestAnimationFrame(animate);
     }
 
-    return () => {
-      window.removeEventListener("mousemove", onMouseMove);
-      window.removeEventListener("resize", resizeScene);
+    animate();
 
-      composer.dispose();
+ 
+    return () => {
+      if (resizeObserver) resizeObserver.disconnect();
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("mousemove", handleMouseMove);
+      container.removeChild(renderer.domElement);
       renderer.dispose();
     };
   }, []);
@@ -135,7 +238,7 @@ export default function ThreeBackground() {
   return (
     <div
       ref={mountRef}
-      className="absolute inset-0 z-0 pointer-events-none bg-linear-to-b from-[#120020] to-[#040010]"
-    />
+      className="absolute inset-x-0 top-0 bottom-0 z-0 pointer-events-auto overflow-hidden"
+    ></div>
   );
 }

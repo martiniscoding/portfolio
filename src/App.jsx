@@ -6,9 +6,11 @@ import Trusted from './Trusted'
 import Footer from './Footer'
 import Cards from './Cards'
 import ThreeBackground from './ThreeBackground'
+import { ScrollProvider } from './ScrollContext'
 function App() {
   return (
-    <div className='bg-black flex flex-col items-center pb-5 overflow-x-hidden'>
+    <ScrollProvider>
+      <div className='bg-black flex flex-col items-center pb-5 overflow-x-hidden'>
       <div className='w-6xl'>
         <div className='relative'>
           <ThreeBackground />
@@ -24,6 +26,8 @@ function App() {
       </div>
      
     </div>
+    </ScrollProvider>
+    
   )
 }
 

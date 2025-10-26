@@ -10,7 +10,7 @@ import { motion } from "motion/react";
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden text-white mt-15 flex flex-col justify-center md:flex-row md:justify-between w-full pb-5 px-4 border-b">
+    <section className=" flex flex-col md:flex-row relative overflow-hidden text-white mt-15   justify-center md:justify-between w-full pb-5 px-4 border-b">
       <motion.div
         initial={{
           x: -200,
@@ -25,7 +25,7 @@ function Hero() {
         }}
         className="relative z-10 w-[60%]"
       >
-        <div className="flex flex-col gap-1 font-light text-9xl text-purple-500 drop-shadow-[0_0_10px_#a855f7]">
+        <div className="flex flex-col gap-1 font-light  text-9xl text-purple-500 drop-shadow-[0_0_10px_#a855f7]">
           <span>Sakshi</span>
           <span>Kanwar</span>
         </div>
@@ -35,13 +35,13 @@ function Hero() {
           build fast, reliable LLM apps.
         </div>
         <div className="pt-4 flex gap-5 border-b pb-10">
-          <button className="bg-white rounded-xl px-3 py-1 flex gap-1 text-black items-center">
+          <button className="bg-white rounded-xl px-4 py-2 flex gap-1 text-black items-center">
             <span className="size-4">
               <FaArrowRight className="w-full h-full size-2" />
             </span>
             <span>View Work</span>
           </button>
-          <button className="bg-white/30 rounded-xl px-3 py-1 flex gap-1 text-black">
+          <button className="bg-white/50 rounded-xl px-4 py-2 flex gap-1 text-black">
             <span className="text-lg">
               <CiMail className="w-full h-full" />
             </span>
