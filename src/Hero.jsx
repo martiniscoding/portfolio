@@ -33,6 +33,8 @@ function Hero() {
           AI Engineer & Frontend - shipping agentic systems, RAG pipelines, and
           developer UX. I blend product intuition with systems engineering to
           build fast, reliable LLM apps.
+
+          Boss bit*h
         </div>
         <div className="pt-4 flex gap-5 border-b pb-10">
           <button className="bg-white rounded-xl px-3 py-1 flex gap-1 text-black items-center">
