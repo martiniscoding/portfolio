@@ -12,14 +12,14 @@ function RecentWork() {
       <div className="text-3xl mb-4">Recent Work</div>
 
       {/* FLEX CONTAINER */}
-      <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-6 w-full">
+      <div className="flex flex-col items-center md:flex-row md:flex-wrap justify-center gap-6 w-full">
         {/* Card 1 */}
         <motion.div
           initial={{ x: -200 }}
           whileInView={{ x: 0 }}
           viewport={{ once: false, amount: 0.1 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col border border-white rounded-2xl w-full sm:w-[80%] md:w-[30%]"
+          className="flex flex-col border border-white rounded-2xl  md:w-[30%]"
         >
           <div className="h-[60%] overflow-hidden">
             <img

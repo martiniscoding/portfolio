@@ -11,14 +11,9 @@ function App() {
   return (
     <ScrollProvider>
       <div className='bg-black flex flex-col items-center pb-5 overflow-x-hidden'>
-      <div className='w-6xl'>
-        <div className='relative'>
-          <ThreeBackground />
-          <div className='relative z-10'>
-            <Navbar></Navbar>
-            <Hero></Hero>
-          </div>
-        </div>
+      <div className='w-full max-w-6xl px-4 sm:px-6 md:px-8'>
+        <Navbar></Navbar>
+        <Hero></Hero>
         <RecentWork></RecentWork>
         <Trusted></Trusted>
         <Cards></Cards>

@@ -1,14 +1,12 @@
 import React from "react";
-import { motion } from "framer-motion"; // motion/react nahi, ye sahi import hai
-
+import { motion } from "framer-motion"; 
 function Trusted() {
   return (
-    <div className="py-10 border-t border-white">
-      <div className="w-full pt-5 pb-15 flex flex-col items-center mt-10 text-white gap-5 mb-4 bg-neutral-950 border-white/10 border rounded-3xl">
-        <div className="text-3xl font-semibold">Trusted by product teams</div>
-        <div>From seed-stage startups to enterprise platform groups.</div>
+   
+      <div className=" flex flex-col flex-wrap items-center  mt-10 text-white py-10 border-t  w-full pt-5 pb-15  gap-5 mb-4 bg-neutral-950 border-white/10 border rounded-3xl">
+        <div className="  text-xl md:text-3xl font-semibold">Trusted by product teams</div>
+        <div className="px-3 text-center">From seed-stage startups to enterprise platform groups.</div>
 
-        {/* Parent container with overflow-hidden */}
         <div className="w-full overflow-hidden">
           <motion.div
             className="flex whitespace-nowrap"
@@ -19,7 +17,6 @@ function Trusted() {
               ease: "linear",
             }}
           >
-            {/* Original text */}
             <span className="mx-10">TechFlow</span>
             <span className="mx-10">Nexus Labs</span>
             <span className="mx-10">DataSync</span>
@@ -28,7 +25,6 @@ function Trusted() {
             <span className="mx-10">InnovateTech</span>
             <span className="mx-10">FlowState</span>
 
-            {/* Duplicate for seamless loop */}
             <span className="mx-10">TechFlow</span>
             <span className="mx-10">Nexus Labs</span>
             <span className="mx-10">DataSync</span>
@@ -39,7 +35,7 @@ function Trusted() {
           </motion.div>
         </div>
       </div>
-    </div>
+  
   );
 }
 

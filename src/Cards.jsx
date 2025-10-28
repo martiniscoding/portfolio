@@ -6,7 +6,7 @@ function Cards() {
     const {aboutRef, projectsRef, workRef } = useScroll();
 
   return (
-    <div ref={workRef} className="motion-translate-x-in-[200%] motion-translate-y-in-[0%] w-full flex justify-between gap-1 px-4 py-10 border-t border-b border-neutral-600  text-white">
+    <div ref={workRef} className="flex flex-col   w-full md:flex-row  justify-between gap-1 px-4 py-10 border-t border-b border-neutral-600  text-white">
       <motion.div
       initial={{
         y:200,
@@ -22,7 +22,7 @@ function Cards() {
       transition={{
         duration:0.4
       }}
-       className="bg-white/5 border-white/10 border rounded-2xl pt-4 pr-4 pb-4 pl-4 w-1/3">
+       className="bg-white/5 border-white/10 border rounded-2xl pt-4 pr-4 pb-4 pl-4 w-full  md:w-1/3">
         <div className="text-xl font-bold">Timeline</div>
         <div className="gap-2 text-sm relative mt-3 flex flex-col border-l border-gray-500 pl-3  ">
           <div className=" border-gray-500 flex flex-col">
@@ -68,7 +68,7 @@ function Cards() {
       }}
       transition={{
         duration:0.4
-      }} className="bg-white/5 border-white/10 border rounded-2xl pt-4  pb-4 pl-4 w-1/3  ">
+      }} className="bg-white/5 border-white/10 border rounded-2xl pt-4 pr-4 pb-4 pl-4 w-full md:w-1/3  ">
           <div className="flex items-center gap-1 font-bold text-xl">
             <span><GoNorthStar></GoNorthStar></span>
             <span>Tech Stack</span>
@@ -76,7 +76,7 @@ function Cards() {
           <div className="flex flex-col gap-3 mt-2">
             <div className="">
             <span className="font-bold  ">Frontend & UI</span>
-            <div className="flex flex-wrap mt-2 gap-2">
+            <div className="flex flex-wrap mt-2 gap-2 ">
               <span className=" w-1/4 px-2 py-1 text-xs rounded-md bg-white/10 border border-white/10">TypeScript</span>
               <span className=" w-1/4 px-2 py-1 text-xs rounded-md bg-white/10 border border-white/10">TypeScript</span>
               <span className=" w-1/4 px-2 py-1 text-xs rounded-md bg-white/10 border border-white/10">TypeScript</span>
@@ -113,7 +113,7 @@ function Cards() {
       }}
       transition={{
         duration:0.4
-      }} className="bg-white/5 border-white/10 border rounded-2xl pt-4 pr-4 pb-4 pl-4 w-1/3">
+      }} className="bg-white/5 border-white/10 border rounded-2xl pt-4 pr-4 pb-4 pl-4 w-full md:w-1/3 ">
         <div className="text-xl font-bold">Timeline</div>
         <div className="gap-2 text-sm relative mt-3 flex flex-col border-l border-gray-500 pl-3  ">
           <div className=" border-gray-500 flex flex-col">

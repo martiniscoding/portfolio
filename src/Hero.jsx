@@ -10,7 +10,7 @@ import { motion } from "motion/react";
 
 function Hero() {
   return (
-    <section className=" flex flex-col md:flex-row relative overflow-hidden text-white mt-15   justify-center md:justify-between w-full pb-5 px-4 border-b">
+    <section className=" flex flex-col  flex-wrap  justify-center md:flex-row relative overflow-hidden text-white mt-10  md:justify-between w-full pb-5 px-4 border-b">
       <motion.div
         initial={{
           x: -200,
@@ -23,39 +23,41 @@ function Hero() {
         transition={{
           duration: 0.5,
         }}
-        className="relative z-10 w-[60%]"
+        className="relative z-10 w-full md:w-[60%]"
       >
-        <div className="flex flex-col gap-1 font-light  text-9xl text-purple-500 drop-shadow-[0_0_10px_#a855f7]">
+        <div className="flex flex-col gap-1 font-semibold text-4xl sm:text-6xl md:text-8xl lg:text-9xl text-purple-500 ">
           <span>Sakshi</span>
           <span>Kanwar</span>
         </div>
-        <div className="text-3xl pt-5">
-          AI Engineer & Frontend - shipping agentic systems, RAG pipelines, and
+        <div className="pt-5 w-full max-w-[700px] text-base sm:text-lg md:text-2xl lg:text-3xl leading-relaxed whitespace-normal">
+          AI Engineer & Frontend — shipping agentic systems, RAG pipelines, and
           developer UX. I blend product intuition with systems engineering to
           build fast, reliable LLM apps.
         </div>
-        <div className="pt-4 flex gap-5 border-b pb-10">
-          <button className="bg-white rounded-4xl px-4 py-2 flex gap-1 text-black items-center">
+        <div className=" flex flex-col md:flex-row pt-4  gap-5 border-b pb-10">
+          <button className="bg-white rounded-4xl px-4 py-4 md:py-2 flex gap-1 text-black items-center w-full md:w-auto">
             <span className="size-4">
               <FaArrowRight className="w-full h-full size-2 text-neutral-700" />
             </span>
             <span>View Work</span>
           </button>
-          <button className="bg-white/50 rounded-4xl px-4 py-2 flex gap-1 text-black">
+          <button className="flex items-center gap-2 bg-white/20 backdrop-blur-md  text-white px-4 py-4 md:py-2 rounded-4xl hover:bg-white/30 transition-all duration-300 w-full md:w-auto">
             <span className="text-lg">
               <CiMail className="w-full h-full" />
             </span>
             <span>hello@sakshikanwar.dev</span>
           </button>
         </div>
-        <div className="flex justify-between mx-3 items-center mt-4 pb-10">
+        <div className=" flex flex-col  md:flex-row gap-2  md:justify-between mx-3 md:items-center mt-4 pb-10">
           <div className="flex gap-2">
             <span className="mt-2 text">
               <CiLocationOn className="w-full h-full"></CiLocationOn>
             </span>
             <div className="flex-col flex">
               <span>Based in New Delhi</span>
-              <span className="text-sm text-gray-500">open to remote work </span>
+              <span className="text-sm text-gray-500">
+                open to remote work{" "}
+              </span>
             </div>
           </div>
           <div className="flex gap-2">
@@ -64,7 +66,9 @@ function Hero() {
             </span>
             <div className="flex-col flex">
               <span>AI Systems + frontend </span>
-              <span className="text-sm text-gray-500">RAG, agents, benchmarks </span>
+              <span className="text-sm text-gray-500">
+                RAG, agents, benchmarks{" "}
+              </span>
             </div>
           </div>
           <div className="flex gap-2">
@@ -73,12 +77,14 @@ function Hero() {
             </span>
             <div className="flex-col flex">
               <span>Currently Available</span>
-              <span className="text-sm text-gray-500">Starting Mid-September </span>
+              <span className="text-sm text-gray-500">
+                Starting Mid-September{" "}
+              </span>
             </div>
           </div>
         </div>
       </motion.div>
-      <div className="relative z-10 flex flex-col justify-center w-[35%]">
+      <div className="relative z-10 flex flex-col justify-center w-full md:w-[35%]">
         <motion.div
           initial={{
             x: 200,
