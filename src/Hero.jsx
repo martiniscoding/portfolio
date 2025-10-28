@@ -25,7 +25,7 @@ function Hero() {
         }}
         className="relative z-10 w-full md:w-[60%]"
       >
-        <div className="flex flex-col gap-1 font-semibold text-4xl sm:text-6xl md:text-8xl lg:text-9xl text-purple-500 ">
+        <div className="flex flex-col gap-1 font-medium text-3xl md:text-8xl text-purple-500 ">
           <span>Sakshi</span>
           <span>Kanwar</span>
         </div>
@@ -86,7 +86,7 @@ function Hero() {
           </div>
         </div>
       </motion.div>
-      <div className="relative z-10 flex flex-col justify-center w-full md:w-[35%]">
+      <div className="relative z-10 flex flex-col justify-center w-full md:w-[40%]">
         <motion.div
           initial={{
             x: 200,
