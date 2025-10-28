@@ -8,3 +8,4 @@ export default defineConfig({
     allowedHosts: ['www.sakshian.com'],
   },
 })
+
