@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     allowedHosts: ['www.sakshian.com'],
+    host:true
   },
 })
 
