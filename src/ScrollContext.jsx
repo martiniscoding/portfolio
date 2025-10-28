@@ -1,4 +1,3 @@
-// ScrollContext.jsx
 import { createContext, useContext, useRef } from "react";
 
 const ScrollContext = createContext();

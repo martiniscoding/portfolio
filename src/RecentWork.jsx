@@ -11,9 +11,7 @@ function RecentWork() {
     <div className="w-full text-white py-10" ref={projectsRef}>
       <div className="text-3xl mb-4">Recent Work</div>
 
-      {/* FLEX CONTAINER */}
       <div className="flex flex-col items-center md:flex-row md:flex-wrap justify-center gap-6 w-full">
-        {/* Card 1 */}
         <motion.div
           initial={{ x: -200 }}
           whileInView={{ x: 0 }}
@@ -40,7 +38,6 @@ function RecentWork() {
           </div>
         </motion.div>
 
-        {/* Card 2 */}
         <motion.div
           initial={{ y: 200 }}
           animate={{ y: 0 }}
@@ -66,7 +63,6 @@ function RecentWork() {
           </div>
         </motion.div>
 
-        {/* Card 3 */}
         <motion.div
           initial={{ x: 200 }}
           whileInView={{ x: 0 }}
@@ -93,7 +89,6 @@ function RecentWork() {
           </div>
         </motion.div>
 
-        {/* Card 4 */}
         <motion.div
           initial={{ x: -200 }}
           whileInView={{ x: 0 }}
@@ -120,7 +115,6 @@ function RecentWork() {
           </div>
         </motion.div>
 
-        {/* Card 5 */}
         <motion.div
           initial={{ y: 200 }}
           whileInView={{ y: 0 }}
@@ -147,7 +141,6 @@ function RecentWork() {
           </div>
         </motion.div>
 
-        {/* Card 6 */}
         <motion.div
           initial={{ x: 200 }}
           whileInView={{ x: 0 }}

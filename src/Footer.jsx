@@ -9,7 +9,7 @@ function Footer() {
   const { aboutRef } = useScroll();
 
   return (
-    <div className="pt-10 px-4 sm:px-6 lg:px-8" ref={aboutRef}>
+    <div className="pt-10 px-4 sm:px-6 lg:px-8 overflow-y-hidden" ref={aboutRef}>
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
