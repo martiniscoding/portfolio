@@ -1,5 +1,8 @@
 import React from "react";
 import work from "../public/work.jpg";
+import erasepdf from "../public/erasepdf.png";
+import property from "../public/property.png";
+import aiconsole from "../public/aiconsole.png";
 import { RiRobot2Line } from "react-icons/ri";
 import { motion } from "motion/react";
 import { useScroll } from "./ScrollContext";
@@ -17,23 +20,23 @@ function RecentWork() {
           whileInView={{ x: 0 }}
           viewport={{ once: false, amount: 0.1 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col border border-white rounded-2xl  md:w-[30%]"
+          className="flex flex-col border border-white rounded-2xl  md:w-[30%] p-2"
         >
-          <div className="h-[60%] overflow-hidden">
+          <div className="h-[60%] overflow-hidden ">
             <img
-              src={work}
+              src={property}
               alt=""
-              className="h-full w-full rounded-t-2xl hover:scale-105 duration-500 transition-transform"
+              className="h-50 w-full rounded-t-2xl hover:scale-105 duration-500 transition-transform"
             />
           </div>
           <div className="h-[40%] mx-2 mt-3 flex flex-col">
             <div className="flex items-center gap-2 text-gray-500 text-sm">
               <RiRobot2Line />
-              <span>RAG Platform</span>
+              <span>FULL-STACK</span>
             </div>
-            <span className="font-bold">Vector-backed Retrieval</span>
+            <span className="font-bold">Real Estate Enterprise Website</span>
             <span>
-              Hybrid search, chunking, schema-aware re-ranking, observability.
+              Designed a custom real estate landing page with tailored UI, brand-aligned visuals, smooth animations, and a cohesive design system enhancing user engagement.
             </span>
           </div>
         </motion.div>
@@ -42,23 +45,23 @@ function RecentWork() {
           initial={{ y: 200 }}
           animate={{ y: 0 }}
           transition={{ duration: 0.3 }}
-          className="flex flex-col border border-white rounded-2xl w-full sm:w-[80%] md:w-[30%]"
+          className="flex flex-col border p-2 border-white rounded-2xl w-full sm:w-[80%] md:w-[30%]"
         >
           <div className="h-[60%] overflow-hidden">
             <img
-              src={work}
+              src={aiconsole}
               alt=""
-              className="h-full w-full rounded-t-2xl hover:scale-105 duration-500 transition-transform"
+              className="h-50 w-full rounded-t-2xl hover:scale-105 duration-500 transition-transform"
             />
           </div>
           <div className="h-[40%] mx-2 mt-3 flex flex-col">
             <div className="flex items-center gap-2 text-gray-500 text-sm">
               <RiRobot2Line />
-              <span>RAG Platform</span>
+              <span>GEN-AI</span>
             </div>
-            <span className="font-bold">Vector-backed Retrieval</span>
+            <span className="font-bold">AI Search Console</span>
             <span>
-              Hybrid search, chunking, schema-aware re-ranking, observability.
+              Developed a GPT-powered conversational search system integrating vector search, NLU, and image understanding to convert user queries into precise backend inventory actions.
             </span>
           </div>
         </motion.div>
@@ -68,104 +71,29 @@ function RecentWork() {
           whileInView={{ x: 0 }}
           viewport={{ once: false, amount: 0.1 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col border border-white rounded-2xl w-full sm:w-[80%] md:w-[30%]"
+          className="flex p-2 flex-col border border-white rounded-2xl w-full sm:w-[80%] md:w-[30%]"
         >
           <div className="h-[60%] overflow-hidden">
             <img
-              src={work}
+              src={erasepdf}
               alt=""
-              className="h-full w-full rounded-t-2xl hover:scale-105 duration-500 transition-transform"
+              className="h-50 w-full rounded-t-2xl hover:scale-105 duration-500 transition-transform"
             />
           </div>
           <div className="h-[40%] mx-2 mt-3 flex flex-col">
             <div className="flex items-center gap-2 text-gray-500 text-sm">
               <RiRobot2Line />
-              <span>RAG Platform</span>
+              <span>FULL-STACK</span>
             </div>
-            <span className="font-bold">Vector-backed Retrieval</span>
+            <span className="font-bold">Erase PDF</span>
             <span>
-              Hybrid search, chunking, schema-aware re-ranking, observability.
+             ErasePDF is an AI enabled simple PDF editing, modification and interaction utility which aims to make manipulating and understanding PDFs as easy as talking to them
             </span>
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ x: -200 }}
-          whileInView={{ x: 0 }}
-          viewport={{ once: false, amount: 0.1 }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col border border-white rounded-2xl w-full sm:w-[80%] md:w-[30%]"
-        >
-          <div className="h-[60%] overflow-hidden">
-            <img
-              src={work}
-              alt=""
-              className="h-full w-full rounded-t-2xl hover:scale-105 duration-500 transition-transform"
-            />
-          </div>
-          <div className="h-[40%] mx-2 mt-3 flex flex-col">
-            <div className="flex items-center gap-2 text-gray-500 text-sm">
-              <RiRobot2Line />
-              <span>RAG Platform</span>
-            </div>
-            <span className="font-bold">Vector-backed Retrieval</span>
-            <span>
-              Hybrid search, chunking, schema-aware re-ranking, observability.
-            </span>
-          </div>
-        </motion.div>
 
-        <motion.div
-          initial={{ y: 200 }}
-          whileInView={{ y: 0 }}
-          viewport={{ once: false, amount: 0.1 }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col border border-white rounded-2xl w-full sm:w-[80%] md:w-[30%]"
-        >
-          <div className="h-[60%] overflow-hidden">
-            <img
-              src={work}
-              alt=""
-              className="h-full w-full rounded-t-2xl hover:scale-105 duration-500 transition-transform"
-            />
-          </div>
-          <div className="h-[40%] mx-2 mt-3 flex flex-col">
-            <div className="flex items-center gap-2 text-gray-500 text-sm">
-              <RiRobot2Line />
-              <span>RAG Platform</span>
-            </div>
-            <span className="font-bold">Vector-backed Retrieval</span>
-            <span>
-              Hybrid search, chunking, schema-aware re-ranking, observability.
-            </span>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ x: 200 }}
-          whileInView={{ x: 0 }}
-          viewport={{ once: false, amount: 0.1 }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col border border-white rounded-2xl w-full sm:w-[80%] md:w-[30%]"
-        >
-          <div className="h-[60%] overflow-hidden">
-            <img
-              src={work}
-              alt=""
-              className="h-full w-full rounded-t-2xl hover:scale-105 duration-500 transition-transform"
-            />
-          </div>
-          <div className="h-[40%] mx-2 mt-3 flex flex-col">
-            <div className="flex items-center gap-2 text-gray-500 text-sm">
-              <RiRobot2Line />
-              <span>RAG Platform</span>
-            </div>
-            <span className="font-bold">Vector-backed Retrieval</span>
-            <span>
-              Hybrid search, chunking, schema-aware re-ranking, observability.
-            </span>
-          </div>
-        </motion.div>
+        
       </div>
     </div>
   );

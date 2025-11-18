@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { useScroll } from "./ScrollContext";
 function Cards() {
     const {aboutRef, projectsRef, workRef } = useScroll();
-
+  
   return (
     <div ref={workRef} className="flex flex-col   w-full md:flex-row  justify-between gap-1 px-4 py-10 border-t border-b border-neutral-600  text-white">
       <motion.div
@@ -24,9 +24,39 @@ function Cards() {
       }}
        className="bg-white/5 border-white/10 border rounded-2xl pt-4 pr-4 pb-4 pl-4 w-full  md:w-1/3">
         <div className="text-xl font-bold">Timeline</div>
-        <div className="gap-2 text-sm relative mt-3 flex flex-col border-l border-gray-500 pl-3  ">
+       
+        <div className="gap-2 text-sm relative mt-3 flex flex-col  pl-3  ">
+           <motion.div
+           initial={{
+            scaleY:0,
+            transformOrigin: "bottom"
+           }}
+           whileInView={{
+            scaleY:1
+           }}
+           transition={{
+            duration:2
+           }}
+           viewport={{
+            once:false,
+            amount:0.2
+           }}
+            className="absolute h-61 bg-linear-to-t 
+          from-red-500 via-green-500 to-yellow-400 
+          shadow-[0_0_20px_#ffffff] top-1 -left-1 size-1 "></motion.div>
           <div className=" border-gray-500 flex flex-col">
-            <span className="size-2 bg-white rounded-full absolute -left-1 top-1"></span>
+            <motion.span  
+            initial={{
+              opacity:0
+            }}
+            whileInView={{
+              opacity:1,
+              scale:1.2
+            }}
+            transition={{
+              delay:2
+            }}
+            className="size-3 bg-white rounded-full absolute -left-2 top-1"></motion.span>
             <span className="text-gray-300 font-semibold">2025</span>
             <span className="font-bold">Independent — AI Engineer</span>
             <span>
@@ -35,7 +65,18 @@ function Cards() {
             </span>
           </div>
           <div className=" border-gray-500 flex flex-col">
-            <span className="size-2 bg-white rounded-full absolute -left-1 top-23"></span>
+            <motion.span
+             initial={{
+              opacity:0
+            }}
+            whileInView={{
+              opacity:1,
+              scale:1.2
+            }}
+            transition={{
+              delay:1
+            }}
+             className="size-3 bg-white rounded-full absolute -left-2 top-23"></motion.span>
             <span className="text-gray-300 font-semibold">2025</span>
             <span className="font-bold">Independent — AI Engineer</span>
             <span>
@@ -44,7 +85,18 @@ function Cards() {
             </span>
           </div>
           <div className=" border-gray-500 flex flex-col">
-            <span className="size-2 bg-white rounded-full absolute -left-1 top-45"></span>
+            <motion.span
+             initial={{
+              opacity:0
+            }}
+            whileInView={{
+              opacity:1,
+              scale:1.2
+            }}
+            transition={{
+              delay:0.5
+            }}
+             className="size-3 bg-white rounded-full absolute -left-2 top-45"></motion.span>
             <span className="text-gray-300 font-semibold">2025</span>
             <span className="font-bold">Independent — AI Engineer</span>
             <span>

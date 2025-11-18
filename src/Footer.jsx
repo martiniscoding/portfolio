@@ -28,7 +28,7 @@ function Footer() {
             <div className="text-sm sm:text-base text-gray-300">Email</div>
             <div className="flex items-center gap-2 text-lg sm:text-xl mt-2">
               <CiMail className="size-5" />
-              <p className="truncate">Hello@SakshiKanwar.com</p>
+              <p className="truncate">sakshi_kanwar@yahoo.com</p>
             </div>
           </div>
 
@@ -52,7 +52,9 @@ function Footer() {
               <span className="bg-white rounded-full p-2 hover:scale-110 transition-transform">
                 <CiGlobe className="text-black text-xl sm:text-2xl" />
               </span>
-              <span className="bg-white rounded-full p-2 hover:scale-110 transition-transform">
+              <span onClick={()=>{
+                window.open(" http://linkedin.com/in/sakshi-kanwar")
+              }} className="bg-white rounded-full p-2 hover:scale-110 transition-transform">
                 <IoLogoLinkedin className="text-black text-xl sm:text-2xl" />
               </span>
             </div>

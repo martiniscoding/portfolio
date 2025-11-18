@@ -25,7 +25,7 @@ function Hero() {
         }}
         className="relative z-10 w-full md:w-[60%]"
       >
-        <div className="flex flex-col gap-1 font-medium text-3xl md:text-8xl text-purple-500 ">
+        <div className="flex flex-col gap-1 font-light text-3xl md:text-8xl  ">
           <span>Sakshi</span>
           <span>Kanwar</span>
         </div>
@@ -33,8 +33,6 @@ function Hero() {
           AI Engineer & Frontend — shipping agentic systems, RAG pipelines, and
           developer UX. I blend product intuition with systems engineering to
           build fast, reliable LLM apps.
-
-          Boss bit*h
         </div>
         <div className=" flex flex-col md:flex-row pt-4  gap-5 border-b pb-10">
           <button className="bg-white rounded-4xl px-4 py-4 md:py-2 flex gap-1 text-black items-center w-full md:w-auto">
@@ -47,7 +45,7 @@ function Hero() {
             <span className="text-lg">
               <CiMail className="w-full h-full" />
             </span>
-            <span>hello@sakshikanwar.dev</span>
+            <span>sakshi_kanwar@yahoo.com</span>
           </button>
         </div>
         <div className=" flex flex-col  md:flex-row gap-2  md:justify-between mx-3 md:items-center mt-4 pb-10">
@@ -56,7 +54,7 @@ function Hero() {
               <CiLocationOn className="w-full h-full"></CiLocationOn>
             </span>
             <div className="flex-col flex">
-              <span>Based in New Delhi</span>
+              <span>Based in Burnaby Bc canada</span>
               <span className="text-sm text-gray-500">
                 open to remote work{" "}
               </span>
