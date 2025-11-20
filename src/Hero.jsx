@@ -7,8 +7,10 @@ import { FaMicrochip } from "react-icons/fa6";
 import photo from "../public/photo.png";
 import { GoDotFill } from "react-icons/go";
 import { motion } from "motion/react";
+import { useScroll } from "./ScrollContext";
 
 function Hero() {
+  const { scrollTo, aboutRef, projectsRef,workRef } = useScroll();
   return (
     <section className=" flex flex-col  flex-wrap  justify-center md:flex-row relative overflow-hidden text-white mt-10  md:justify-between w-full pb-5 px-4 border-b">
       <motion.div
@@ -30,16 +32,18 @@ function Hero() {
           <span>Kanwar</span>
         </div>
         <div className="pt-5 w-full max-w-[700px] text-base sm:text-lg md:text-2xl lg:text-3xl leading-relaxed whitespace-normal">
-          AI Engineer & Frontend — shipping agentic systems, RAG pipelines, and
-          developer UX. I blend product intuition with systems engineering to
-          build fast, reliable LLM apps.
+          Full-stack engineer crafting scalable apps and intelligent AI systems.
+          From Python to React, LLMs to cloud DevOps, I build automation-driven,
+          high-impact solutions that deliver speed, precision, and innovation.
         </div>
         <div className=" flex flex-col md:flex-row pt-4  gap-5 border-b pb-10">
           <button className="bg-white rounded-4xl px-4 py-4 md:py-2 flex gap-1 text-black items-center w-full md:w-auto">
             <span className="size-4">
               <FaArrowRight className="w-full h-full size-2 text-neutral-700" />
             </span>
-            <span>View Work</span>
+            <span onClick={()=>{
+          scrollTo(projectsRef)
+        }}>View Work</span>
           </button>
           <button className="flex items-center gap-2 bg-white/20 backdrop-blur-md  text-white px-4 py-4 md:py-2 rounded-4xl hover:bg-white/30 transition-all duration-300 w-full md:w-auto">
             <span className="text-lg">

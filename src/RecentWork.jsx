@@ -38,13 +38,24 @@ function RecentWork() {
             <span>
               Designed a custom real estate landing page with tailored UI, brand-aligned visuals, smooth animations, and a cohesive design system enhancing user engagement.
             </span>
+            <div className=" flex justify-between w-full mt-2 ">
+              <button className="bg-white px-2 py-1 rounded-xl text-black font-light">
+                Know More
+              </button>
+              <button  onClick={()=>{
+                window.open("https://www.codekouture.com/demo/gawade-galore")
+              }} className="bg-white px-2 py-1 rounded-xl text-black font-light">
+                Live Preview
+              </button>
+
+            </div>
           </div>
         </motion.div>
 
         <motion.div
-          initial={{ y: 200 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 0.3 }}
+          initial={{ x: 200 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 0.5 }}
           className="flex flex-col border p-2 border-white rounded-2xl w-full sm:w-[80%] md:w-[30%]"
         >
           <div className="h-[60%] overflow-hidden">
@@ -63,6 +74,17 @@ function RecentWork() {
             <span>
               Developed a GPT-powered conversational search system integrating vector search, NLU, and image understanding to convert user queries into precise backend inventory actions.
             </span>
+            <div className=" flex justify-between w-full mt-2 ">
+              <button className="bg-white px-2 py-1 rounded-xl text-black font-light">
+                Know More
+              </button>
+              <button onClick={()=>{
+                window.open("https://www.codekouture.com/demo/standarde-app/")
+              }}  className="bg-white px-2 py-1 rounded-xl text-black font-light">
+                Live Preview
+              </button>
+
+            </div>
           </div>
         </motion.div>
 
@@ -89,6 +111,17 @@ function RecentWork() {
             <span>
              ErasePDF is an AI enabled simple PDF editing, modification and interaction utility which aims to make manipulating and understanding PDFs as easy as talking to them
             </span>
+            <div className=" flex justify-between w-full mt-2 ">
+              <button className="bg-white px-2 py-1 rounded-xl text-black font-light">
+                Know More
+              </button>
+              <button onClick={()=>{
+                window.open("https://www.codekouture.com/demo/erasepdf/dashboard")
+              }} className="bg-white px-2 py-1 rounded-xl text-black font-light">
+                Live Preview
+              </button>
+
+            </div>
           </div>
         </motion.div>
 

@@ -18,8 +18,8 @@ function Footer() {
         className="w-full relative rounded-3xl border border-white/10 bg-neutral-950 text-white p-6 sm:p-8 md:p-10"
       >
         <div>
-          <div className="font-black text-4xl sm:text-6xl md:text-8xl text-center md:text-left leading-tight">
-            Build With AI.
+          <div className="font-black text-4xl sm:text-6xl md:text-6xl text-center md:text-left leading-tight">
+            Build Generational Product.
           </div>
         </div>
 
