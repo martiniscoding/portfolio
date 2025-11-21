@@ -32,7 +32,12 @@ function Cards() {
         }}
         className="bg-white/5  border-white/10 border rounded-2xl pt-4 pr-4 pb-4 pl-4 w-full  md:w-1/3  min-h-104 md:min-h-96 h-auto md:h-105"
       >
-        <div className="text-xl font-bold">Timeline</div>
+        <div className="flex items-center gap-1 font-bold text-xl">
+          <span>
+            <GoNorthStar></GoNorthStar>
+          </span>
+          <span>Timeline</span>
+        </div>
 
         <div className="gap-2 text-sm relative mt-3 flex flex-col  pl-3  ">
           <div className=" border-gray-500 flex flex-col relative  ">
@@ -111,7 +116,7 @@ function Cards() {
                 transition={{
                   delay: 1,
                 }}
-                 src={vois}
+                src={vois}
                 className="size-4 bg-white rounded-full absolute -left-5 top-1 z-4"
               ></motion.img>
             </div>
@@ -297,7 +302,32 @@ function Cards() {
           duration: 0.4,
         }}
         className="bg-white/5 border-white/10 border rounded-2xl pt-4 pr-4 pb-4 pl-4 w-full md:w-1/3 "
-      ></motion.div>
+      >
+        <div className="flex items-center gap-1 font-bold text-xl">
+          <span>
+            <GoNorthStar></GoNorthStar>
+          </span>
+          <span>Tech Stack</span>
+        </div>
+        <div className="mt-2 font-bold">
+          <span>1. Cultural Secretary and Business Lead</span>
+          <br />
+          <span className="font-light">Rivera - University Festival</span>
+          <div className="text-sm font-normal mt-1">
+            Drove high-impact campus fest, led 50+ team, secured $1M sponsors,
+            managed $700K, launched revenue innovations delivering 200% ROI and
+            attendance.
+          </div>
+        </div>
+        <div className="mt-2 ">
+          <span className="font-bold ">2. Digital Content Creator</span>
+          <br />
+          <span className="font-light">Camy's Pizza </span>
+          <div>
+            Led content strategy for Camy’s Pizza, creating high-impact visuals and reels (280K+ views) that boosted brand visibility, engagement, and online growth.
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 }

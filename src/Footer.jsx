@@ -49,9 +49,7 @@ function Footer() {
               <span className="bg-white rounded-full p-2 hover:scale-110 transition-transform">
                 <FiGithub className="text-black text-xl sm:text-2xl" />
               </span>
-              <span className="bg-white rounded-full p-2 hover:scale-110 transition-transform">
-                <CiGlobe className="text-black text-xl sm:text-2xl" />
-              </span>
+             
               <span onClick={()=>{
                 window.open(" http://linkedin.com/in/sakshi-kanwar")
               }} className="bg-white rounded-full p-2 hover:scale-110 transition-transform">
