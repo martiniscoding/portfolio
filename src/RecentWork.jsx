@@ -68,7 +68,7 @@ function RecentWork() {
           <div className="h-[40%] mx-2 mt-3 flex flex-col">
             <div className="flex items-center gap-2 text-gray-500 text-sm">
               <RiRobot2Line />
-              <span>GEN-AI</span>
+              <span>FULL STACK+ GEN-AI</span>
             </div>
             <span className="font-bold">AI Search Console</span>
             <span>
@@ -105,7 +105,7 @@ function RecentWork() {
           <div className="h-[40%] mx-2 mt-3 flex flex-col">
             <div className="flex items-center gap-2 text-gray-500 text-sm">
               <RiRobot2Line />
-              <span>FULL-STACK</span>
+              <span>FULL-STACK + GEN-AI</span>
             </div>
             <span className="font-bold">Erase PDF</span>
             <span>
