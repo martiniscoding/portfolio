@@ -181,19 +181,19 @@ function Cards() {
         <div className="mt-2">
           <span className="font-bold  ">Languages</span>
           <div className="flex flex-wrap mt-2 gap-2">
-            <span className=" w-1/7 text-center   px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
+            <span className=" 1/6 sm:w-1/7 text-center    px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
               Python
             </span>
-            <span className=" w-1/6   text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
+            <span className=" 1/5 sm:w-1/6    text-center px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
               Javascript
             </span>
-            <span className=" w-1/6    text-center  py-1 text-xs rounded-md bg-white/10 border border-white/10">
+            <span className=" 1/5 sm:w-1/6    text-center px-1  py-1 text-xs rounded-md bg-white/10 border border-white/10">
               Typescript
             </span>
-            <span className=" w-1/6   px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
+            <span className=" 1/5 sm:w-1/6   px-1 py-1  text-xs rounded-md bg-white/10 border border-white/10">
               React JS
             </span>
-            <span className=" w-1/5   px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
+            <span className="w-1/7 sm:w-1/5    px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
               HTML/CSS
             </span>
           </div>
@@ -201,19 +201,19 @@ function Cards() {
         <div className="mt-2">
           <span className="font-bold  ">Databases</span>
           <div className="flex flex-wrap mt-2 gap-2">
-            <span className=" w-1/5 text-center    py-1 text-xs rounded-md bg-white/10 border border-white/10">
+            <span className=" 1/4 sm:w-1/5 text-center  px-1  py-1 text-xs rounded-md bg-white/10 border border-white/10">
               MongoDB
             </span>
-            <span className=" w-1/5   text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
+            <span className=" 1/4 sm:w-1/5    text-center px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
               DynamoDB
             </span>
-            <span className=" w-1/8    text-center  py-1 text-xs rounded-md bg-white/10 border border-white/10">
+            <span className=" 1/7 sm:w-1/8     text-center px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
               Redis
             </span>
-            <span className=" w-1/6    text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
+            <span className="  1/5 sm:w-1/6     text-center px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
               Postgress
             </span>
-            <span className=" w-1/7 text-center    py-1 text-xs rounded-md bg-white/10 border border-white/10">
+            <span className=" 1/6 sm:w-1/5  text-center  px-1   py-1 text-xs rounded-md bg-white/10 border border-white/10">
               My-SQL
             </span>
           </div>
@@ -221,27 +221,27 @@ function Cards() {
         <div className="flex flex-col gap-3 mt-2">
           <div className="">
             <span className="font-bold  ">Machine Learning</span>
-            <div className="flex flex-wrap mt-2 gap-1 ">
-              <span className="  w-1/9 text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
+            <div className="flex flex-wrap mt-2 gap-2 ">
+              <span className="  w-/8 sm:w-1/9 px-2 text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
                 LLM
               </span>
-              <span className="  w-1/9  text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
+              <span className="   1/8 sm:w-1/9 px-2  text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
                 BERT
               </span>
 
-              <span className="  w-1/7 text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
+              <span className="   w-1/5 sm:w-1/6 px-1 text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
                 OpenCV
               </span>
 
-              <span className="  w-1/9  text-center  py-1 text-xs rounded-md bg-white/10 border border-white/10">
+              <span className="  px-1 sm:w-1/10 text-center  py-1 text-xs rounded-md bg-white/10 border border-white/10">
                 RAG
               </span>
 
-              <span className="  w-1/5  text-center px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
+              <span className=" w-1/4  sm:w-1/5  text-center px-2 py-1 text-xs rounded-md bg-white/10 border border-white/10">
                 LangChain
               </span>
 
-              <span className="  w-1/5 px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
+              <span className=" w-1/4  sm:w-1/5 px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
                 LangGraph
               </span>
             </div>
@@ -249,16 +249,16 @@ function Cards() {
           <div className="">
             <span className="font-bold  ">Devops</span>
             <div className="flex flex-wrap mt-2 gap-2">
-              <span className=" w-1/8 text-center   px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
+              <span className=" w-1/7 sm:w-1/8 text-center    px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
                 AWS
               </span>
-              <span className=" w-1/5   text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
+              <span className=" w-1/4 sm:w-1/5 px-1   text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
                 MS Azure
               </span>
-              <span className=" w-1/5    text-center  py-1 text-xs rounded-md bg-white/10 border border-white/10">
+              <span className="w-1/4 sm:w-1/5 px-1     text-center  py-1 text-xs rounded-md bg-white/10 border border-white/10">
                 Git/Github
               </span>
-              <span className=" w-1/7   px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
+              <span className="w-1/6 sm:w-1/7    px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
                 Docker
               </span>
             </div>
@@ -266,19 +266,19 @@ function Cards() {
           <div className="">
             <span className="font-bold  ">Automation</span>
             <div className="flex flex-wrap gap-2">
-              <span className=" w-1/9 text-center   px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
+              <span className=" w-1/8 sm:w-1/9 text-center    px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
                 n8N
               </span>
-              <span className=" w-1/7   text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
+              <span className=" w-1/6 sm:w-1/7 px-1    text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
                 Zapier
               </span>
-              <span className=" w-1/5    text-center  py-1 text-xs rounded-md bg-white/10 border border-white/10">
+              <span className=" w-1/4 sm:w-1/5 px-1    text-center  py-1 text-xs rounded-md bg-white/10 border border-white/10">
                 Blue Prism
               </span>
-              <span className=" w-1/7   px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
+              <span className=" w-1/6 sm:w-1/7    px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
                 UI Path
               </span>
-              <span className=" w-1/7   px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
+              <span className=" w-1/6 sm:w-1/7    px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
                 Notion
               </span>
             </div>
