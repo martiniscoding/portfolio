@@ -309,7 +309,7 @@ function Cards() {
           </span>
           <span>Leadership + Content Creation</span>
         </div>
-        <div className="mt-2 font-bold">
+        <div className="mt-3 font-bold">
           <span>1. Cultural Secretary and Business Lead</span>
           <br />
           <span className="font-light">Rivera - University Festival</span>
@@ -319,7 +319,7 @@ function Cards() {
             attendance.
           </div>
         </div>
-        <div className="mt-2 ">
+        <div className="mt-5 ">
           <span className="font-bold ">2. Digital Content Creator</span>
           <br />
           <span className="font-light">Camy's Pizza </span>

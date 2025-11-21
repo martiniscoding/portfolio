@@ -17,21 +17,17 @@ function Trusted() {
               ease: "linear",
             }}
           >
-            <span className="mx-10">TechFlow</span>
-            <span className="mx-10">Nexus Labs</span>
-            <span className="mx-10">DataSync</span>
-            <span className="mx-10">VisionCorp</span>
-            <span className="mx-10">CloudBase</span>
-            <span className="mx-10">InnovateTech</span>
-            <span className="mx-10">FlowState</span>
-
-            <span className="mx-10">TechFlow</span>
-            <span className="mx-10">Nexus Labs</span>
-            <span className="mx-10">DataSync</span>
-            <span className="mx-10">VisionCorp</span>
-            <span className="mx-10">CloudBase</span>
-            <span className="mx-10">InnovateTech</span>
-            <span className="mx-10">FlowState</span>
+            <span className="mx-10">Barclays</span>
+            <span className="mx-10">Vodafone</span>
+            <span className="mx-10">Kamp 12</span>
+            <span className="mx-10">Alpine Media</span>
+            <span className="mx-10">Camy's Pizza</span>
+            <span className="mx-10">Barclays</span>
+            <span className="mx-10">Vodafone</span>
+            <span className="mx-10">Kamp 12</span>
+            <span className="mx-10">Alpine Media</span>
+            <span className="mx-10">Barclays</span>
+            
           </motion.div>
         </div>
       </div>
