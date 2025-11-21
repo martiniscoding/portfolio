@@ -307,7 +307,7 @@ function Cards() {
           <span>
             <GoNorthStar></GoNorthStar>
           </span>
-          <span>Tech Stack</span>
+          <span>Leadership + Content Creation</span>
         </div>
         <div className="mt-2 font-bold">
           <span>1. Cultural Secretary and Business Lead</span>
