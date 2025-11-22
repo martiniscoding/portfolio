@@ -193,7 +193,7 @@ function Cards() {
             <span className=" 1/5 sm:w-1/6   px-1 py-1  text-xs rounded-md bg-white/10 border border-white/10">
               React JS
             </span>
-            <span className="w-1/7 sm:w-1/5    px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
+            <span className="w-1/4 sm:w-1/5    px-1 py-1 text-xs rounded-md bg-white/10 border border-white/10">
               HTML/CSS
             </span>
           </div>
