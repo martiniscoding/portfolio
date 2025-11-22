@@ -19,7 +19,7 @@ function Trusted() {
           >
             <span className="mx-10">Barclays</span>
             <span className="mx-10">Vodafone</span>
-            <span className="mx-10">Kamp 12</span>
+            <span className="mx-10">Camp K12</span>
             <span className="mx-10">Alpine Media</span>
             <span className="mx-10">Camy's Pizza</span>
             <span className="mx-10">Barclays</span>
