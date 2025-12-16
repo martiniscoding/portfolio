@@ -15,7 +15,7 @@ function Footer() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="w-full relative rounded-3xl border border-white/10 bg-neutral-950 text-white p-6 sm:p-8 md:p-10"
+        className="w-full relative rounded-3xl border border-white/10 bg-neutral-950 text-white p-6 sm:p-8 md:p-14"
       >
         <div>
           <div className="font-black text-4xl sm:text-6xl md:text-6xl text-center md:text-left leading-tight">
@@ -28,7 +28,7 @@ function Footer() {
             <div className="text-sm sm:text-base text-gray-300">Email</div>
             <div className="flex items-center gap-2 text-lg sm:text-xl mt-2">
               <CiMail className="size-5" />
-              <p className="truncate">sakshi_kanwar@yahoo.com</p>
+              <p className="truncate">satyamcodes@gmail.com</p>
             </div>
           </div>
 
@@ -43,15 +43,19 @@ function Footer() {
           <div className="flex flex-col items-center md:items-start md:border-l md:border-white md:pl-5">
             <div className="text-sm sm:text-base text-gray-300">Social</div>
             <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-3">
-              <span className="bg-white rounded-full p-2 hover:scale-110 transition-transform">
+              <span onClick={()=>{
+                window.open("https://x.com/satyam147721667")
+              }} className="bg-white rounded-full p-2 hover:scale-110 transition-transform">
                 <CiTwitter className="text-black text-xl sm:text-2xl" />
               </span>
-              <span className="bg-white rounded-full p-2 hover:scale-110 transition-transform">
+              <span onClick={()=>{
+                window.open("https://github.com/martiniscoding")
+              }} className="bg-white rounded-full p-2 hover:scale-110 transition-transform">
                 <FiGithub className="text-black text-xl sm:text-2xl" />
               </span>
              
               <span onClick={()=>{
-                window.open(" http://linkedin.com/in/sakshi-kanwar")
+                window.open(" https://www.linkedin.com/in/satyam-singh-b89037165/")
               }} className="bg-white rounded-full p-2 hover:scale-110 transition-transform">
                 <IoLogoLinkedin className="text-black text-xl sm:text-2xl" />
               </span>

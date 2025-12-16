@@ -11,16 +11,16 @@ function RecentWork() {
     const {aboutRef, projectsRef, workRef } = useScroll();
 
   return (
-    <div className="w-full text-white py-10" ref={projectsRef}>
-      <div className="text-3xl mb-4">Recent Work</div>
-
-      <div className="flex flex-col items-center md:flex-row md:flex-wrap justify-center gap-6 w-full">
+    <div className="w-full text-white py-10 px-10" ref={projectsRef}>
+      <div className="text-4xl mb-4 font-light">Projects </div>
+     
+      <div className="flex flex-col items-center md:flex-row md:flex-wrap  justify-center gap-10  w-full ">
         <motion.div
           initial={{ x: -200 }}
           whileInView={{ x: 0 }}
           viewport={{ once: false, amount: 0.1 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col border border-white rounded-2xl  md:w-[30%] p-2"
+          className="flex flex-col border border-white rounded-2xl  md:w-[40%] p-2"
         >
           <div className="h-[60%] overflow-hidden ">
             <img
@@ -57,7 +57,7 @@ function RecentWork() {
           whileInView={{ x: 0 }}
           viewport={{once:false , amount:0.1}}
           transition={{ duration: 0.5 }}
-          className="flex flex-col border p-2 border-white rounded-2xl w-full sm:w-[80%] md:w-[30%]"
+          className="flex flex-col border p-2 border-white rounded-2xl w-full sm:w-[80%] md:w-[40%]"
         >
           <div className="h-[60%] overflow-hidden">
             <img
@@ -94,7 +94,7 @@ function RecentWork() {
           whileInView={{ x: 0 }}
           viewport={{ once: false, amount: 0.1 }}
           transition={{ duration: 0.5 }}
-          className="flex p-2 flex-col border border-white rounded-2xl w-full sm:w-[80%] md:w-[30%]"
+          className="flex p-2 flex-col border border-white rounded-2xl w-full sm:w-[80%] md:w-[40%]"
         >
           <div className="h-[60%] overflow-hidden">
             <img

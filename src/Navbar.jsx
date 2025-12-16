@@ -23,7 +23,7 @@ function Navbar() {
      className="overflow-y-hidden relative flex flex-wrap justify-between items-center w-full text-white pb-4 pt-3">
       <div className="flex  gap-1">
         <span className="text-xl"><IoTriangle className="w-full h-full"/></span>
-        <p>Sakshi Kanwar</p>
+        <p>Satyam Singh</p>
       </div>
       <div className="flex gap-5">
         <span className="hidden md:block" onClick={()=>{

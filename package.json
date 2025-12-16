@@ -10,6 +10,9 @@
     "start": "vite preview"
   },
   "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.4.2",
+    "@react-three/postprocessing": "^3.0.4",
     "@tailwindcss/vite": "^4.1.15",
     "docker": "^1.0.0",
     "motion": "^12.23.24",

@@ -4,7 +4,7 @@ import { CiMail } from "react-icons/ci";
 import { CiLocationOn } from "react-icons/ci";
 import { FaCheck } from "react-icons/fa6";
 import { FaMicrochip } from "react-icons/fa6";
-import photo from "../public/photo.png";
+import photo from "../public/photo.jpg";
 import { GoDotFill } from "react-icons/go";
 import { motion } from "motion/react";
 import { useScroll } from "./ScrollContext";
@@ -28,14 +28,14 @@ function Hero() {
         className="relative z-10 w-full md:w-[60%]"
       >
         <div className="flex flex-col gap-1 font-light text-3xl md:text-8xl  ">
-          <span>Sakshi</span>
-          <span>Kanwar</span>
+          <span>Satyam</span>
+          <span>Singh</span>
         </div>
-        <div className="pt-5 w-full max-w-[700px] text-base sm:text-lg md:text-2xl lg:text-3xl leading-relaxed whitespace-normal">
-          Full-stack engineer crafting scalable apps and intelligent AI systems.
-          From Python to React, LLMs to cloud DevOps, I build automation-driven,
-          high-impact solutions that deliver speed, precision, and innovation.
+        <div className="pt-5 pr-5 w-full max-w-[700px] text-base sm:text-lg md:text-2xl lg:text-3xl leading-relaxed whitespace-normal">
+         I can build a full stack application integrate AI agents to 
+         it deploy them and make sure the deployment never goes down , all this solo.
         </div>
+        <p className="mt-3 font-bold text-xl"> Full Stack / AI Agents / System Design / Devops </p>
         <div className=" flex flex-col md:flex-row pt-4  gap-5 border-b pb-10">
           <button className="bg-white rounded-4xl px-4 py-4 md:py-2 flex gap-1 text-black items-center w-full md:w-auto">
             <span className="size-4">
@@ -49,7 +49,7 @@ function Hero() {
             <span className="text-lg">
               <CiMail className="w-full h-full" />
             </span>
-            <span>sakshi_kanwar@yahoo.com</span>
+            <span>satyamcodes@gmail.com</span>
           </button>
         </div>
         <div className=" flex flex-col  md:flex-row gap-2  md:justify-between mx-3 md:items-center mt-4 pb-10">
@@ -58,7 +58,7 @@ function Hero() {
               <CiLocationOn className="w-full h-full"></CiLocationOn>
             </span>
             <div className="flex-col flex">
-              <span>Based in Burnaby Bc canada</span>
+              <span>Based in New Delhi, India </span>
               <span className="text-sm text-gray-500">
                 open to remote work{" "}
               </span>
@@ -88,7 +88,7 @@ function Hero() {
           </div>
         </div>
       </motion.div>
-      <div className="relative z-10 flex flex-col justify-center w-full md:w-[40%]">
+      <div className="relative z-10 flex flex-col   w-full md:w-[40%] ">
         <motion.div
           initial={{
             x: 200,
@@ -103,30 +103,8 @@ function Hero() {
           }}
           className="relative w-full"
         >
-          <img src={photo} alt="" className="rounded-xl" />
-          <div className="flex w-full absolute bottom-2 gap-2 px-3">
-            <div className="w-1/3 rounded-xl bg-neutral-800 border border-white/15 p-3 shadow-lg">
-              <div className=" flex items-center gap-1">
-                <GoDotFill className="text-gray-500"></GoDotFill>
-                <p className="text-lg font-semibold">82%</p>
-              </div>
-              <p className="text-[11px] ">pass@1 eval</p>
-            </div>
-            <div className="w-1/3 rounded-xl bg-neutral-800 border border-white/15 p-3 shadow-lg">
-              <div className="flex items-center gap-1">
-                <GoDotFill className="text-gray-500"></GoDotFill>
-                <p className="text-lg font-semibold">780ms</p>
-              </div>
-              <p className="text-[11px] ">p95 latency</p>
-            </div>
-            <div className="w-1/3 rounded-xl bg-neutral-800 border border-white/15 p-3 shadow-lg">
-              <div className="flex items-center gap-1">
-                <GoDotFill className="text-gray-500"></GoDotFill>
-                <p className="text-lg font-semibold">1.2k</p>
-              </div>
-              <p className="text-[11px] ">tests</p>
-            </div>
-          </div>
+          <img src={photo} alt="" className="rounded-xl ml-3 h-100 mt-20 " />
+          
         </motion.div>
       </div>
     </section>
