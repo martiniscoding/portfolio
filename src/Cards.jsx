@@ -32,12 +32,12 @@ function Cards() {
           <motion.div 
             initial={{ scaleY: 0 }} 
             whileInView={{ scaleY: 1 }} 
-            className="absolute w-[2px] bg-gradient-to-b from-blue-500 via-purple-500 to-red-500 left-[14px] top-2 bottom-2 origin-top"
+            className="absolute w-[3px] h-20 bg-gradient-to-b from-blue-500 via-purple-500 to-red-500 left-[14px] top-2 bottom-2 origin-top"
           />
           
           <div className="flex justify-between items-start z-10">
             <div className="flex gap-4">
-              <img src={freelancer} className="size-8 rounded-full border-2 border-black" alt="Freelance" />
+              <img src={freelancer} className="size-7 rounded-full border-2 border-black" alt="Freelance" />
               <div>
                 <p className="font-bold">Freelancer</p>
                 <p className="text-sm text-neutral-400">Delivered 3+ products</p>
@@ -46,9 +46,9 @@ function Cards() {
             <div className="text-xs text-neutral-500 mt-1">Oct 2025 - Now</div>
           </div>
 
-          <div className="flex justify-between items-start z-10">
+          <div className="flex justify-between items-start z-10 ">
             <div className="flex gap-4">
-              <img src={jeesoc} className="size-8 rounded-full border-2 border-black" alt="Jee Society" />
+              <img src={jeesoc} className=" size-7 rounded-full border-2 border-black" alt="Jee Society" />
               <div>
                 <p className="font-bold">Jee Society</p>
                 <p className="text-sm text-neutral-400">CMO (took startup from 0 - 10k $ revenue)</p>
