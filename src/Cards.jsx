@@ -3,6 +3,7 @@ import { GoNorthStar } from "react-icons/go";
 import { motion } from "motion/react";
 import { useScroll } from "./ScrollContext";
 import freelancer from "../public/freelancer.jpg";
+import jeesoc from "../public/jeesoc.png"
 function Cards() {
   const { aboutRef, projectsRef, workRef } = useScroll();
 
@@ -19,9 +20,8 @@ function Cards() {
               scaleY: 0,
               transformOrigin: "bottom",
             }}
-            whileInView={{ scaleY: 1  }}
-            
-            className="absolute h-36 bg-linear-to-t from-red-500 via-green-500 via-blue-500 to-purple-500 left-4 "
+            whileInView={{ scaleY: 1 }}
+            className="absolute h-16 bg-linear-to-t from-red-500 via-green-500 via-blue-500 to-purple-500 left-3 "
           >
             .
           </motion.div>
@@ -29,7 +29,7 @@ function Cards() {
             <div className="flex gap-2">
               <img
                 src={freelancer}
-                className="size-9 rounded-full z-110 mt-1"
+                className="size-7 rounded-full z-110 mt-1"
                 alt=""
               />
               <div className="flex flex-col ">
@@ -42,30 +42,16 @@ function Cards() {
           <div className="flex justify-between">
             <div className="flex gap-2">
               <img
-                src={freelancer}
-                className="size-9 rounded-full  z-110  mt-1"
+                src={jeesoc}
+                className="size-7 rounded-full  z-110  mt-1"
                 alt=""
               />
               <div className="flex flex-col ">
-                <p className="font-bold">Freelancer</p>
-                <p className="font-light">Delievered 3+ products </p>
+                <p className="font-bold">Jee Society</p>
+                <p className="font-light">CMO (took startup from 0 - 10k $ revenue)</p>
               </div>
             </div>
-            <div className="font-light">Oct 2025-Now</div>
-          </div>
-          <div className="flex justify-between">
-            <div className="flex gap-2">
-              <img
-                src={freelancer}
-                className="size-9 rounded-full  z-110  mt-1"
-                alt=""
-              />
-              <div className="flex flex-col ">
-                <p className="font-bold">Freelancer</p>
-                <p className="font-light">Delievered 3+ products </p>
-              </div>
-            </div>
-            <div className="font-light">Oct 2025-Now</div>
+            <div className="font-light">Sep 2024 -Feb 2024</div>
           </div>
         </div>
       </div>
@@ -106,7 +92,9 @@ function Cards() {
             <span className=" 1/6 sm:w-fit px-2 text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
               Tailwind CSS
             </span>
-
+            <span className=" 1/6 sm:w-fit px-2  text-center     py-1 text-xs rounded-md bg-white/10 border border-white/10">
+              Tanstack Query
+            </span>
             <span className=" 1/5 sm:w-fit   px-2 py-1  text-xs rounded-md bg-white/10 border border-white/10">
               Framer Motion
             </span>
@@ -127,6 +115,9 @@ function Cards() {
             <span className=" 1/2 sm:w-fit px-2    text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
               Nest JS
             </span>
+             <span className=" 1/6 sm:w-fit px-2  text-center    py-1 text-xs rounded-md bg-white/10 border border-white/10">
+              tRPC
+            </span>
             <span className=" 1/7 sm:w-fit px-2     text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
               Mongo DB
             </span>
@@ -139,16 +130,17 @@ function Cards() {
             <span className=" 1/6 sm:w-fit px-2  text-center     py-1 text-xs rounded-md bg-white/10 border border-white/10">
               Web-Sockets
             </span>
-             <span className=" 1/6 sm:w-fit  text-center  px-1   py-1 text-xs rounded-md bg-white/10 border border-white/10">
+            <span className=" 1/6 sm:w-fit  text-center  px-1   py-1 text-xs rounded-md bg-white/10 border border-white/10">
               Redis
             </span>
             <span className=" 1/6 sm:w-fit px-2  text-center     py-1 text-xs rounded-md bg-white/10 border border-white/10">
               Web-RTC
             </span>
+
             <span className=" 1/6 sm:w-fit px-2  text-center    py-1 text-xs rounded-md bg-white/10 border border-white/10">
               Prisma
             </span>
-             <span className=" 1/6 sm:w-fit px-2  text-center    py-1 text-xs rounded-md bg-white/10 border border-white/10">
+            <span className=" 1/6 sm:w-fit px-2  text-center    py-1 text-xs rounded-md bg-white/10 border border-white/10">
               Drizzle
             </span>
             <span className=" 1/6 sm:w-fit px-2  text-center    py-1 text-xs rounded-md bg-white/10 border border-white/10">

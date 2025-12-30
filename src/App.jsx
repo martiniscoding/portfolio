@@ -6,26 +6,25 @@ import Trusted from './Trusted'
 import Footer from './Footer'
 import Cards from './Cards'
 import { ScrollProvider } from './ScrollContext'
-import AsteroidsBackground from './AsteroidsBackground'
+import AsteroidsBackground from './MeteorBackground'
+import MeteorBackground from './MeteorBackground'
 function App() {
   return (
     <ScrollProvider>
-      <div className='bg-black flex flex-col items-center pb-5 overflow-x-hidden'>
+      {/* REMOVED bg-black HERE */}
+      <div className='flex flex-col items-center pb-5 overflow-x-hidden min-h-screen'>
         
-      <div className='w-full max-w-6xl px-4 sm:px-6 md:px-8'>
+        <MeteorBackground /> 
         
-        <Navbar></Navbar>
-        <Hero></Hero>
-        <RecentWork></RecentWork>
-        
-        <Cards></Cards>
-        <Footer></Footer>
+        <div className='relative z-10 w-full max-w-6xl px-4 sm:px-6 md:px-8'>
+          <Navbar />
+          <Hero />
+          <RecentWork />
+          <Cards />
+          <Footer />
+        </div>
       </div>
-     
-    </div>
     </ScrollProvider>
-    
-  )
+  );
 }
-
 export default App

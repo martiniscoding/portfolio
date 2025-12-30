@@ -32,9 +32,10 @@ function Hero() {
           <span>Singh</span>
         </div>
         <div className="pt-5 pr-5 w-full max-w-[700px] text-base sm:text-lg md:text-2xl lg:text-3xl leading-relaxed whitespace-normal">
-         I can build a full stack application integrate AI agents to 
-         it deploy them and make sure the deployment never goes down , all this solo.
+         I can build a full stack application ,integrate AI agent to 
+         it, scale it to a million users , deploy it and  make sure the deployment never goes down , all this solo.
         </div>
+        <p >(I can migrate your app from ec2 to k8s too ;))</p>
         <p className="mt-3 font-bold text-xl"> Full Stack / AI Agents / System Design / Devops </p>
         <div className=" flex flex-col md:flex-row pt-4  gap-5 border-b pb-10">
           <button className="bg-white rounded-4xl px-4 py-4 md:py-2 flex gap-1 text-black items-center w-full md:w-auto">
@@ -103,7 +104,7 @@ function Hero() {
           }}
           className="relative w-full"
         >
-          <img src={photo} alt="" className="rounded-xl ml-3 h-100 mt-20 " />
+          <img src={photo} alt="" className="rounded-xl ml-3  h-60 md:h-100 mt-20 " />
           
         </motion.div>
       </div>
