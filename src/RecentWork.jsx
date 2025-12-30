@@ -18,8 +18,8 @@ function RecentWork() {
       <div className="flex flex-col items-center md:flex-row md:flex-wrap  justify-center gap-10  w-full ">
         <motion.div
           initial={{ x: -200 }}
-          whileInView={{ x: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          animate={{ x: 0 }}
+          viewport={{ once: true, amount: 0.9 }}
           transition={{ duration: 0.5 }}
           className="flex flex-col border border-white rounded-2xl  w-full sm:w-[80%] md:w-[48%] p-2"
         >
@@ -79,7 +79,7 @@ function RecentWork() {
 
         <motion.div
           initial={{ x: 200 }}
-          whileInView={{ x: 0 }}
+          animate={{ x: 0 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5 }}
           className="flex flex-col border p-2 border-white rounded-2xl w-full sm:w-[80%] md:w-[48%]"
@@ -122,7 +122,7 @@ function RecentWork() {
 
         <motion.div
           initial={{ x: 200 }}
-          whileInView={{ x: 0 }}
+          animate={{ x: 0 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5 }}
           className="flex p-2 flex-col border border-white rounded-2xl w-full sm:w-[80%] md:w-[40%]"
