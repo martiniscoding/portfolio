@@ -1,212 +1,132 @@
 import React from "react";
 import { GoNorthStar } from "react-icons/go";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { useScroll } from "./ScrollContext";
 import freelancer from "../public/freelancer.jpg";
-import jeesoc from "../public/jeesoc.png"
+import jeesoc from "../public/jeesoc.png";
+
+import { 
+  SiReact, SiNextdotjs, SiTailwindcss, SiReactquery, SiFramer, SiRedux, SiShadcnui,
+  SiExpress, SiNestjs, SiTrpc, SiMongodb, SiPostgresql, SiRedis, SiSocketdotio, SiWebrtc, 
+  SiPrisma, SiDrizzle, SiStripe, SiDocker, SiAmazons3, SiAwslambda, SiKubernetes, 
+  SiNginx, SiGithubactions, SiGit, SiGithub, SiOpenai, SiLangchain, SiAmazonwebservices
+} from "react-icons/si";
+import { FaTerminal } from "react-icons/fa";
+
 function Cards() {
-  const { aboutRef, projectsRef, workRef } = useScroll();
+  const { workRef } = useScroll();
+
+  const SkillBadge = ({ icon: Icon, text, color }) => (
+    <span className="flex items-center gap-2 px-3 py-1 text-xs font-bold rounded-md bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+      {Icon && <Icon className="text-sm" style={{ color: color || "inherit" }} />}
+      {text}
+    </span>
+  );
 
   return (
-    <div
-      ref={workRef}
-      className="flex flex-col   w-full md:flex-col  justify-between gap-1 px-4 py-10 border-t border-b border-neutral-600  text-white"
-    >
-      <div className="bg-white/5 border-white/10 border rounded-2xl  px-3 py-3">
-        <p className="font-bold  text-xl">Work Experience </p>
-        <div className="flex flex-col gap-3 justify-center mt-2 relative">
-          <motion.div
-            initial={{
-              scaleY: 0,
-              transformOrigin: "bottom",
-            }}
-            whileInView={{ scaleY: 1 }}
-            className="absolute h-16 bg-linear-to-t from-red-500 via-green-500 via-blue-500 to-purple-500 left-3 "
-          >
-            .
-          </motion.div>
-          <div className="flex justify-between">
-            <div className="flex gap-2">
-              <img
-                src={freelancer}
-                className="size-7 rounded-full z-110 mt-1"
-                alt=""
-              />
-              <div className="flex flex-col ">
+    <div ref={workRef} className="flex flex-col w-full justify-between gap-1 px-4 py-10 border-t border-b border-neutral-600 text-white">
+      
+      <div className="bg-white/5 border-white/10 border rounded-2xl px-3 py-4">
+        <p className="font-bold text-xl mb-4">Work Experience</p>
+        <div className="flex flex-col gap-6 relative ml-2">
+          <motion.div 
+            initial={{ scaleY: 0 }} 
+            whileInView={{ scaleY: 1 }} 
+            className="absolute w-[2px] bg-gradient-to-b from-blue-500 via-purple-500 to-red-500 left-[14px] top-2 bottom-2 origin-top"
+          />
+          
+          <div className="flex justify-between items-start z-10">
+            <div className="flex gap-4">
+              <img src={freelancer} className="size-8 rounded-full border-2 border-black" alt="Freelance" />
+              <div>
                 <p className="font-bold">Freelancer</p>
-                <p className="font-light">Delievered 3+ products </p>
+                <p className="text-sm text-neutral-400">Delivered 3+ products</p>
               </div>
             </div>
-            <div className="font-light">Oct 2025-Now</div>
+            <div className="text-xs text-neutral-500 mt-1">Oct 2025 - Now</div>
           </div>
-          <div className="flex justify-between">
-            <div className="flex gap-2">
-              <img
-                src={jeesoc}
-                className="size-7 rounded-full  z-110  mt-1"
-                alt=""
-              />
-              <div className="flex flex-col ">
+
+          <div className="flex justify-between items-start z-10">
+            <div className="flex gap-4">
+              <img src={jeesoc} className="size-8 rounded-full border-2 border-black" alt="Jee Society" />
+              <div>
                 <p className="font-bold">Jee Society</p>
-                <p className="font-light">CMO (took startup from 0 - 10k $ revenue)</p>
+                <p className="text-sm text-neutral-400">CMO (took startup from 0 - 10k $ revenue)</p>
               </div>
             </div>
-            <div className="font-light">Sep 2024 -Feb 2024</div>
+            <div className="text-xs text-neutral-500 mt-1">Sep 2024 - Feb 2025</div>
           </div>
         </div>
       </div>
 
       <motion.div
-        initial={{
-          y: 200,
-          opacity: 0,
-        }}
-        whileInView={{
-          y: 0,
-          opacity: 1,
-        }}
-        viewport={{
-          once: false,
-          amount: 0.1,
-        }}
-        transition={{
-          duration: 0.4,
-        }}
-        className="bg-white/5 border-white/10 border rounded-2xl pt-4 pr-4 pb-4 pl-4 w-full md:w-full mt-4"
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: false, amount: 0.1 }}
+        transition={{ duration: 0.5 }}
+        className="bg-white/5 border-white/10 border rounded-2xl p-6 w-full mt-4"
       >
-        <div className="flex items-center gap-1 font-bold text-xl">
-          <span>
-            <GoNorthStar></GoNorthStar>
-          </span>
-          <span>Skills</span>
+        <div className="flex items-center gap-2 font-bold text-xl mb-6">
+          <GoNorthStar className="text-blue-400" />
+          <span>Skills & Technologies</span>
         </div>
-        <div className="mt-3">
-          <span className="font-bold">Frontend</span>
-          <div className="flex flex-wrap mt-2 gap-3 font-bold">
-            <span className=" 1/5 sm:w-fit    text-center px-2 py-1 text-xs rounded-md bg-white/10 border border-white/10">
-              React JS
-            </span>
-            <span className=" 1/5 sm:w-fit    text-center px-2  py-1 text-xs rounded-md bg-white/10 border border-white/10">
-              Next JS
-            </span>
-            <span className=" 1/6 sm:w-fit px-2 text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
-              Tailwind CSS
-            </span>
-            <span className=" 1/6 sm:w-fit px-2  text-center     py-1 text-xs rounded-md bg-white/10 border border-white/10">
-              Tanstack Query
-            </span>
-            <span className=" 1/5 sm:w-fit   px-2 py-1  text-xs rounded-md bg-white/10 border border-white/10">
-              Framer Motion
-            </span>
-            <span className=" 1/5 sm:w-fit   px-2 py-1  text-xs rounded-md bg-white/10 border border-white/10">
-              Redux
-            </span>
-            <span className="w-1/4 sm:w-fit    px-2 py-1 text-xs rounded-md bg-white/10 border border-white/10">
-              Shadcn
-            </span>
-          </div>
-        </div>
-        <div className="mt-2">
-          <span className="font-bold  ">Backend</span>
-          <div className="flex flex-wrap mt-2 gap-3 font-bold ">
-            <span className=" 1/4 sm:w-fit px-2 text-center   py-1 text-xs rounded-md bg-white/10 border border-white/10">
-              Express JS
-            </span>
-            <span className=" 1/2 sm:w-fit px-2    text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
-              Nest JS
-            </span>
-             <span className=" 1/6 sm:w-fit px-2  text-center    py-1 text-xs rounded-md bg-white/10 border border-white/10">
-              tRPC
-            </span>
-            <span className=" 1/7 sm:w-fit px-2     text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
-              Mongo DB
-            </span>
-            <span className="  1/5 sm:w-fit px-2     text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
-              Postgress
-            </span>
-            <span className=" 1/6 sm:w-fit px-2  text-center    py-1 text-xs rounded-md bg-white/10 border border-white/10">
-              Redis
-            </span>
-            <span className=" 1/6 sm:w-fit px-2  text-center     py-1 text-xs rounded-md bg-white/10 border border-white/10">
-              Web-Sockets
-            </span>
-            <span className=" 1/6 sm:w-fit  text-center  px-1   py-1 text-xs rounded-md bg-white/10 border border-white/10">
-              Redis
-            </span>
-            <span className=" 1/6 sm:w-fit px-2  text-center     py-1 text-xs rounded-md bg-white/10 border border-white/10">
-              Web-RTC
-            </span>
 
-            <span className=" 1/6 sm:w-fit px-2  text-center    py-1 text-xs rounded-md bg-white/10 border border-white/10">
-              Prisma
-            </span>
-            <span className=" 1/6 sm:w-fit px-2  text-center    py-1 text-xs rounded-md bg-white/10 border border-white/10">
-              Drizzle
-            </span>
-            <span className=" 1/6 sm:w-fit px-2  text-center    py-1 text-xs rounded-md bg-white/10 border border-white/10">
-              Stripe
-            </span>
-          </div>
-        </div>
-        <div className="flex flex-col gap-3 mt-2">
-          <div className="">
-            <span className="font-bold  ">Devops</span>
-            <div className="flex flex-wrap mt-2 gap-3 font-bold ">
-              <span className="  w-/8 sm:w-fit px-2 text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
-                Docker
-              </span>
-              <span className=" w-1/7 sm:w-fit text-center    px-2 py-1 text-xs rounded-md bg-white/10 border border-white/10">
-                EC2
-              </span>
-              <span className=" w-1/7 sm:w-fit text-center    px-2 py-1 text-xs rounded-md bg-white/10 border border-white/10">
-                S3
-              </span>
-              <span className=" w-1/7 sm:w-fit text-center    px-2 py-1 text-xs rounded-md bg-white/10 border border-white/10">
-                Lambda
-              </span>
-
-              <span className="   w-1/5 sm:w-fit px-2 text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
-                Kubernetes
-              </span>
-
-              <span className="  px-2 sm:w-1fit text-center  py-1 text-xs rounded-md bg-white/10 border border-white/10">
-                Ngnix
-              </span>
-
-              <span className=" w-1/4  sm:w-fit  text-center px-2 py-1 text-xs rounded-md bg-white/10 border border-white/10">
-                Github-Actions
-              </span>
-
-              <span className=" w-1/4  sm:w-fit px-2 py-1 text-xs rounded-md bg-white/10 border border-white/10">
-                CI CD
-              </span>
-
-              <span className=" w-1/4 sm:w-fit px-2   text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
-                CloudFront
-              </span>
-              <span className="w-1/4 sm:w-fit px-2     text-center  py-1 text-xs rounded-md bg-white/10 border border-white/10">
-                Git/Github
-              </span>
+        <div className="space-y-6">
+          
+          <div>
+            <p className="text-sm font-bold text-neutral-500 uppercase tracking-widest mb-3">Frontend</p>
+            <div className="flex flex-wrap gap-2">
+              <SkillBadge icon={SiReact} text="React JS" color="#61DAFB" />
+              <SkillBadge icon={SiNextdotjs} text="Next JS" color="#FFFFFF" />
+              <SkillBadge icon={SiTailwindcss} text="Tailwind CSS" color="#06B6D4" />
+              <SkillBadge icon={SiReactquery} text="Tanstack Query" color="#FF4154" />
+              <SkillBadge icon={SiFramer} text="Framer Motion" color="#0055FF" />
+              <SkillBadge icon={SiRedux} text="Redux" color="#764ABC" />
+              <SkillBadge icon={SiShadcnui} text="Shadcn" color="#FFFFFF" />
             </div>
           </div>
-          <div className="">
-            <span className="font-bold  ">Gen-Agentic AI</span>
-            <div className="flex flex-wrap gap-3 font-bold mt-2">
-              <span className=" w-fit sm:w-fit text-center    px-2 py-1 text-xs rounded-md bg-white/10 border border-white/10">
-                Langchain
-              </span>
-              <span className=" w-fit sm:w-fit px-2    text-center py-1 text-xs rounded-md bg-white/10 border border-white/10">
-                Langgraph
-              </span>
-              <span className=" w-fit sm:w-fit px-2    text-center  py-1 text-xs rounded-md bg-white/10 border border-white/10">
-                RAG
-              </span>
-              <span className=" w-fit sm:w-fit    px-2 py-1 text-xs rounded-md bg-white/10 border border-white/10">
-                MCP
-              </span>
-              <span className=" w-fit sm:w-fit    px-2 py-1 text-xs rounded-md bg-white/10 border border-white/10">
-                Open Ai
-              </span>
+
+          <div>
+            <p className="text-sm font-bold text-neutral-500 uppercase tracking-widest mb-3">Backend</p>
+            <div className="flex flex-wrap gap-2">
+              <SkillBadge icon={SiExpress} text="Express JS" color="#FFFFFF" />
+              <SkillBadge icon={SiNestjs} text="Nest JS" color="#E0234E" />
+              <SkillBadge icon={SiTrpc} text="tRPC" color="#2596BE" />
+              <SkillBadge icon={SiMongodb} text="Mongo DB" color="#47A248" />
+              <SkillBadge icon={SiPostgresql} text="Postgres" color="#4169E1" />
+              <SkillBadge icon={SiRedis} text="Redis" color="#DC382D" />
+              <SkillBadge icon={SiSocketdotio} text="Web-Sockets" color="#FFFFFF" />
+              <SkillBadge icon={SiWebrtc} text="Web-RTC" color="#333333" />
+              <SkillBadge icon={SiPrisma} text="Prisma" color="#2D3748" />
+              <SkillBadge icon={SiDrizzle} text="Drizzle" color="#C5F74F" />
+              <SkillBadge icon={SiStripe} text="Stripe" color="#008CDD" />
+            </div>
+          </div>
+
+          <div>
+            <p className="text-sm font-bold text-neutral-500 uppercase tracking-widest mb-3">Devops</p>
+            <div className="flex flex-wrap gap-2">
+              <SkillBadge icon={SiDocker} text="Docker" color="#2496ED" />
+              <SkillBadge icon={SiAmazonwebservices} text="EC2" color="#FF9900" />
+              <SkillBadge icon={SiAmazons3} text="S3" color="#569A31" />
+              <SkillBadge icon={SiAwslambda} text="Lambda" color="#FD6600" />
+              <SkillBadge icon={SiKubernetes} text="Kubernetes" color="#326CE5" />
+              <SkillBadge icon={SiNginx} text="Nginx" color="#009639" />
+              <SkillBadge icon={SiGithubactions} text="Github Actions" color="#2088FF" />
+              <SkillBadge  text="CloudFront" color="#FF9900" />
+              <SkillBadge icon={SiGit} text="Git" color="#F05032" />
+              <SkillBadge icon={SiGithub} text="Github" color="#FFFFFF" />
+            </div>
+          </div>
+
+          <div>
+            <p className="text-sm font-bold text-neutral-500 uppercase tracking-widest mb-3">Gen-Agentic AI</p>
+            <div className="flex flex-wrap gap-2">
+              <SkillBadge icon={SiLangchain} text="Langchain" color="#1C3C3C" />
+              <SkillBadge icon={FaTerminal} text="Langgraph" color="#4ade80" />
+              <SkillBadge icon={SiOpenai} text="RAG" color="#412991" />
+              <SkillBadge icon={FaTerminal} text="MCP" color="#60a5fa" />
+              <SkillBadge icon={SiOpenai} text="Open AI" color="#10a37f" />
             </div>
           </div>
         </div>
