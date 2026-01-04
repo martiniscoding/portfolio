@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useScroll } from "./ScrollContext";
 import freelancer from "../public/freelancer.jpg";
 import jeesoc from "../public/jeesoc.png";
-
+import ingest from "../public/inngest.png"
 import { 
   SiReact, SiNextdotjs, SiTailwindcss, SiReactquery, SiFramer, SiRedux, SiShadcnui,
   SiExpress, SiNestjs, SiTrpc, SiMongodb, SiPostgresql, SiRedis, SiSocketdotio, SiWebrtc, 
@@ -126,6 +126,10 @@ function Cards() {
               <SkillBadge icon={FaTerminal} text="Langgraph" color="#4ade80" />
               <SkillBadge icon={SiOpenai} text="RAG" color="#412991" />
               <SkillBadge icon={FaTerminal} text="MCP" color="#60a5fa" />
+              <span className="flex items-center gap-2 px-3 py-1 text-xs font-bold rounded-md bg-white/5 border border-white/10 hover:bg-white/10 transition-colors ">
+                <img src={ingest}  className="size-5 rounded-full" alt="" />
+                <span>Inngest</span>
+              </span>
               <SkillBadge icon={SiOpenai} text="Open AI" color="#10a37f" />
             </div>
           </div>
