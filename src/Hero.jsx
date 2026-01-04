@@ -27,7 +27,7 @@ function Hero() {
         }}
         className="relative z-10 w-full md:w-[60%]"
       >
-        <div className="flex flex-col gap-1 font-light text-3xl md:text-8xl  ">
+        <div className="flex flex-col gap-1 font-light text-5xl  md:text-8xl  ">
           <span>Satyam</span>
           <span>Singh</span>
         </div>
