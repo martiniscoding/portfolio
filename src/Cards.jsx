@@ -110,7 +110,6 @@ function Cards() {
               <SkillBadge icon={SiAmazonwebservices} text="EC2" color="#FF9900" />
               <SkillBadge icon={SiAmazons3} text="S3" color="#569A31" />
               <SkillBadge icon={SiAwslambda} text="Lambda" color="#FD6600" />
-              <SkillBadge icon={SiKubernetes} text="Kubernetes" color="#326CE5" />
               <SkillBadge icon={SiNginx} text="Nginx" color="#009639" />
               <SkillBadge icon={SiGithubactions} text="Github Actions" color="#2088FF" />
               <SkillBadge  text="CloudFront" color="#FF9900" />
@@ -123,7 +122,6 @@ function Cards() {
             <p className="text-sm font-bold text-neutral-500 uppercase tracking-widest mb-3">Gen-Agentic AI</p>
             <div className="flex flex-wrap gap-2">
               <SkillBadge icon={SiLangchain} text="Langchain" color="#1C3C3C" />
-              <SkillBadge icon={FaTerminal} text="Langgraph" color="#4ade80" />
               <SkillBadge icon={SiOpenai} text="RAG" color="#412991" />
               <SkillBadge icon={FaTerminal} text="MCP" color="#60a5fa" />
               <span className="flex items-center gap-2 px-3 py-1 text-xs font-bold rounded-md bg-white/5 border border-white/10 hover:bg-white/10 transition-colors ">
