@@ -26,7 +26,7 @@ function Cards() {
   return (
     <div ref={workRef} className="flex flex-col w-full justify-between gap-1 px-4 py-10 border-t border-b border-neutral-600 text-white">
       
-      <div className="bg-white/5 border-white/10 border rounded-2xl px-3 py-4">
+      <div className="bg-white/5 border-white/10 border rounded-2xl p-6">
         <p className="font-bold text-xl mb-4">Work Experience</p>
         <div className="flex flex-col gap-6 relative ml-2">
           <motion.div 

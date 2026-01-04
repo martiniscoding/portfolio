@@ -33,7 +33,7 @@ function Hero() {
         </div>
         <div className="pt-5 pr-5 w-full max-w-[700px] text-base sm:text-lg md:text-2xl lg:text-3xl leading-relaxed whitespace-normal">
          I can build a full stack application ,integrate AI agent to 
-         it, scale it to a million users , deploy it and  make sure the deployment never goes down , all this solo.
+         it, scale it to million users , deploy it and  make sure the deployment never goes down , all this solo.
         </div>
         <p className="mt-3 font-bold text-xl"> Full Stack / AI Agents / System Design / Devops </p>
         <div className=" flex flex-col md:flex-row pt-4  gap-5 border-b pb-10">
