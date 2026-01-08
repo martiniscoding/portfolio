@@ -28,7 +28,7 @@ function Footer() {
             <div className="text-sm sm:text-base text-gray-300">Email</div>
             <div className="flex items-center gap-2 text-lg sm:text-xl mt-2">
               <CiMail className="size-5" />
-              <p className="truncate">satyamcodes@gmail.com</p>
+              <p className="truncate">satyammworks@gmail.com</p>
             </div>
           </div>
 

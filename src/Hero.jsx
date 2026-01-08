@@ -49,7 +49,7 @@ function Hero() {
             <span className="text-lg">
               <CiMail className="w-full h-full" />
             </span>
-            <span>satyamcodes@gmail.com</span>
+            <span>satyammworks@gmail.com</span>
           </button>
         </div>
         <div className=" flex flex-col  md:flex-row gap-2  md:justify-between mx-3 md:items-center mt-4 pb-10">
