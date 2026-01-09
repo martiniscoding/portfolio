@@ -49,7 +49,7 @@ function RecentWork() {
               <button
                 onClick={() => {
                   window.open(
-                    "https://www.codekouture.com/demo/standarde-app/"
+                   
                   );
                 }}
                 className="bg-white px-2 py-1 rounded-xl text-black font-light"
@@ -115,7 +115,6 @@ function RecentWork() {
               <button
                 onClick={() => {
                   window.open(
-                    "https://www.codekouture.com/demo/standarde-app/"
                   );
                 }}
                 className="bg-white px-2 py-1 rounded-xl text-black font-light"
