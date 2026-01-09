@@ -2,8 +2,6 @@ import React from "react";
 import work from "../public/work.jpg";
 import erasepdf from "../public/erasepdf.png";
 import fingo from "../public/fingo.png";
-import property from "../public/property.png";
-import aiconsole from "../public/aiconsole.png";
 import { RiRobot2Line } from "react-icons/ri";
 import { motion } from "motion/react";
 import { useScroll } from "./ScrollContext";

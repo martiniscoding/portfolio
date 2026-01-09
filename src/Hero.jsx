@@ -36,6 +36,11 @@ function Hero() {
          it, scale it to million users , deploy it and  make sure the deployment never goes down , all this solo.
         </div>
         <p className="mt-3 font-bold text-xl"> Full Stack / AI Agents / System Design / Devops </p>
+        <p className="p-2">
+          <p className="hover:cursor-pointer text-sm text-gray-400" onClick={()=>{
+            window.open("https://medium.com/@satyammworks")
+          }} > ( Click here to read my  System Design blogs ) </p>
+        </p>
         <div className=" flex flex-col md:flex-row pt-4  gap-5 border-b pb-10">
           <button className="bg-white rounded-4xl px-4 py-4 md:py-2 flex gap-1 text-black items-center w-full md:w-auto">
             <span className="size-4">

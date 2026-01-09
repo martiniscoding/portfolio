@@ -40,7 +40,7 @@ function Cards() {
               <img src={freelancer} className="size-7 rounded-full border-2 border-black" alt="Freelance" />
               <div>
                 <p className="font-bold">Freelancer</p>
-                <p className="text-sm text-neutral-400">Delivered 3+ products</p>
+                <p className="text-sm text-neutral-400">Delivered 1 products</p>
               </div>
             </div>
             <div className="text-xs text-neutral-500 mt-1">Oct 2025 - Now</div>
