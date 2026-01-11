@@ -9,7 +9,7 @@ import {
   SiReact, SiNextdotjs, SiTailwindcss, SiReactquery, SiFramer, SiRedux, SiShadcnui,
   SiExpress, SiNestjs, SiTrpc, SiMongodb, SiPostgresql, SiRedis, SiSocketdotio, SiWebrtc, 
   SiPrisma, SiDrizzle, SiStripe, SiDocker, SiAmazons3, SiAwslambda, SiKubernetes, 
-  SiNginx, SiGithubactions, SiGit, SiGithub, SiOpenai, SiLangchain, SiAmazonwebservices
+  SiNginx, SiGithubactions, SiGit, SiGithub, SiOpenai, SiLangchain, SiAmazonwebservices,SiOllama ,SiHuggingface 
 } from "react-icons/si";
 import { FaTerminal } from "react-icons/fa";
 
@@ -122,13 +122,17 @@ function Cards() {
             <p className="text-sm font-bold text-neutral-500 uppercase tracking-widest mb-3">Gen-Agentic AI</p>
             <div className="flex flex-wrap gap-2">
               <SkillBadge icon={SiLangchain} text="Langchain" color="#1C3C3C" />
+              <SkillBadge  text="Langgraph" color="#412991" />
               <SkillBadge icon={SiOpenai} text="RAG" color="#412991" />
+
               <SkillBadge icon={FaTerminal} text="MCP" color="#60a5fa" />
               <span className="flex items-center gap-2 px-3 py-1 text-xs font-bold rounded-md bg-white/5 border border-white/10 hover:bg-white/10 transition-colors ">
                 <img src={ingest}  className="size-5 rounded-full" alt="" />
                 <span>Inngest</span>
               </span>
-              <SkillBadge icon={SiOpenai} text="Open AI" color="#10a37f" />
+              <SkillBadge icon={SiOllama} text="Ollama" color="#FFFFFF" /> 
+              <SkillBadge icon={SiHuggingface} text="Hugging Face" color="#F3FF24" />
+
             </div>
           </div>
         </div>
