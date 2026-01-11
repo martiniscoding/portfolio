@@ -35,7 +35,7 @@ function Hero() {
          I can build a full stack application ,integrate AI agent to 
          it, scale it to million users , deploy it and  make sure the deployment never goes down , all this solo.
         </div>
-        <p className="mt-3 font-bold text-xl"> Full Stack / AI Agents / System Design / Devops </p>
+        <p className="mt-3 font-bold text-md md:text-2xl"> Full Stack / AI Agents / System Design / Devops </p>
         <p className="p-2">
           <p className="hover:cursor-pointer text-sm text-gray-400" onClick={()=>{
             window.open("https://medium.com/@satyammworks")
