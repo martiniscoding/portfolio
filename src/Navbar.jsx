@@ -38,7 +38,7 @@ function Navbar() {
        
       </div>
       <div onClick={()=>{
-        window.open("https://www.sakshian.com/resume.pdf")
+        window.open("")
       }} className=" hidden md:flex bg-white/30 px-3 rounded-3xl  py-1">
         <span className="text-xl"><MdOutlineFileDownload className="w-full h-full text-white "/></span>
         <span>Resume</span>

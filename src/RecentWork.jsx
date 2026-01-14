@@ -123,11 +123,12 @@ function RecentWork() {
               <span className="text-sm font-medium px-2  h-6 bg-white  text-black  rounded-lg ">
                 Next Auth
               </span>
-              <span className="text-sm font-medium px-2  h-6 bg-white  text-black  rounded-lg ">
-                Convex
+             
+              <span className="text-sm font-medium px-2 h-6 bg-white  text-black  rounded-lg ">
+                Postgress
               </span>
               <span className="text-sm font-medium px-2 h-6 bg-white  text-black  rounded-lg ">
-                MongoDB
+                Prisma
               </span>
               <span className=" text-sm font-medium px-2 h-6 bg-white  text-black  rounded-lg ">
                 FabricJS
@@ -242,7 +243,7 @@ function RecentWork() {
               </button>
               <button
                 onClick={() => {
-                  window.open("https://www.codekouture.com/demo/gawade-galore");
+                  window.open("");
                 }}
                 className="bg-white px-2 py-1 rounded-xl text-black font-light"
               >
