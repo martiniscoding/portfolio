@@ -90,7 +90,6 @@ function Cards() {
             <p className="text-sm font-bold text-neutral-500 uppercase tracking-widest mb-3">Backend</p>
             <div className="flex flex-wrap gap-2">
               <SkillBadge icon={SiExpress} text="Express JS" color="#FFFFFF" />
-              <SkillBadge icon={SiNestjs} text="Nest JS" color="#E0234E" />
               <SkillBadge icon={SiTrpc} text="tRPC" color="#2596BE" />
               <SkillBadge icon={SiMongodb} text="Mongo DB" color="#47A248" />
               <SkillBadge icon={SiPostgresql} text="Postgres" color="#4169E1" />
