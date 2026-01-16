@@ -83,7 +83,7 @@ function Hero() {
           </div>
         </div>
       </motion.div>
-      <div className="relative z-10 flex flex-col   w-full md:w-[40%] ">
+      <div className="relative z-10 flex flex-col items-center    w-full md:w-[40%] ">
         <motion.div
           initial={{
             x: 200,
@@ -98,7 +98,7 @@ function Hero() {
           }}
           className="relative w-full"
         >
-          <img src={photo} alt="" className="rounded-xl ml-3  h-60 md:h-100 mt-20 " />
+          <img src={photo} alt="" className=" mb-5 ml-12 md:ml-4 rounded-xl h-60 md:h-100 mt-20 " />
           
         </motion.div>
       </div>
