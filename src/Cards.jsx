@@ -9,7 +9,7 @@ import {
   SiReact, SiNextdotjs, SiTailwindcss, SiReactquery, SiFramer, SiRedux, SiShadcnui,
   SiExpress, SiNestjs, SiTrpc, SiMongodb, SiPostgresql, SiRedis, SiSocketdotio, SiWebrtc, 
   SiPrisma, SiDrizzle, SiStripe, SiDocker, SiAmazons3, SiAwslambda, SiKubernetes, 
-  SiNginx, SiGithubactions, SiGit, SiGithub, SiOpenai, SiLangchain, SiAmazonwebservices,SiOllama ,SiHuggingface 
+  SiNginx, SiGithubactions, SiGit, SiGithub, SiOpenai, SiLangchain, SiAmazonwebservices,SiOllama ,SiHuggingface ,SiRabbitmq 
 } from "react-icons/si";
 import { FaTerminal } from "react-icons/fa";
 
@@ -94,6 +94,7 @@ function Cards() {
               <SkillBadge icon={SiMongodb} text="Mongo DB" color="#47A248" />
               <SkillBadge icon={SiPostgresql} text="Postgres" color="#4169E1" />
               <SkillBadge icon={SiRedis} text="Redis" color="#DC382D" />
+              <SkillBadge icon={SiRabbitmq} text="Rabbit MQ" color="##FFA500" />
               <SkillBadge icon={SiSocketdotio} text="Web-Sockets" color="#FFFFFF" />
               <SkillBadge icon={SiWebrtc} text="Web-RTC" color="#333333" />
               <SkillBadge icon={SiPrisma} text="Prisma" color="#2D3748" />
