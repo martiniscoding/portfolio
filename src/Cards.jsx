@@ -39,8 +39,8 @@ function Cards() {
             <div className="flex gap-4">
               <img src={freelancer} className="size-7 rounded-full border-2 border-black" alt="Freelance" />
               <div>
-                <p className="font-bold">Freelancer</p>
-                <p className="text-sm text-neutral-400">Delivered 1 products</p>
+                <p className="font-bold">MIT HUB</p>
+                <p className="text-sm text-neutral-400">BACKEND DEVELOPER</p>
               </div>
             </div>
             <div className="text-xs text-neutral-500 mt-1">Oct 2025 - Now</div>
