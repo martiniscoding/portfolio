@@ -38,7 +38,7 @@ function Hero() {
         <p className="mt-3 font-bold text-md md:text-2xl"> Full Stack / AI Agents / System Design / Devops </p>
         <p className="p-2">
           <p className="hover:cursor-pointer text-sm text-gray-400" onClick={()=>{
-            window.open("https://medium.com/@satyammworks")
+            window.open("https://www.linkedin.com/in/satyam-singh-b89037165/")
           }} > ( Click here to read my  System Design blogs ) </p>
         </p>
         <div className=" flex flex-col md:flex-row pt-4  gap-5 border-b pb-10">
