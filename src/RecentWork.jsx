@@ -138,6 +138,8 @@ function RecentWork() {
               <Tech>Express</Tech>
               <Tech>Railway</Tech>
               <Tech>Vercel</Tech>
+              <Tech>Upstash</Tech>
+              <Tech>Aiven</Tech>
             </div>
           </div>
         </motion.div>
