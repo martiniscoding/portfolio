@@ -2,7 +2,6 @@ import React from "react";
 import { GoNorthStar } from "react-icons/go";
 import { motion } from "framer-motion";
 import { useScroll } from "./ScrollContext";
-import freelancer from "../public/freelancer.jpg";
 import jeesoc from "../public/jeesoc.png";
 import ingest from "../public/inngest.png"
 import { 
@@ -23,39 +22,81 @@ function Cards() {
     </span>
   );
 
+  const experiences = [
+    {
+      logo: jeesoc,
+      role: "Chief Marketing Officer",
+      company: "JEEsociety · Full-time",
+      date: "Feb 2026 - Present",
+      duration: "6 mos",
+      location: "Remote",
+      desc: "Scaling business operations and building systems that make the user experience better.",
+    },
+    {
+      initials: "MH",
+      role: "Backend Developer",
+      company: "MIT Hub · Internship",
+      date: "Nov 2025 - Feb 2026",
+      duration: "4 mos",
+      location: "Remote",
+      desc: "Built a cloud-native full-stack SaaS platform calendia.io (beta) for Mark Visentin (renowned NHL player) using Express.js, FastAPI, MongoDB, React, Better-Auth, Stripe & Cloudflare infrastructure.",
+    },
+    {
+      logo: jeesoc,
+      role: "Chief Marketing Officer",
+      company: "JEEsociety · Full-time",
+      date: "Aug 2024 - Apr 2025",
+      duration: "9 mos",
+      location: "Mumbai, India · Remote",
+      desc: "Took the ed-tech B2C startup from ₹0 to ₹15 lakhs in revenue.",
+    },
+  ];
+
   return (
     <div ref={workRef} className="flex flex-col w-full justify-between gap-1 px-4 py-10 border-t border-b border-neutral-600 text-white">
       
       <div className="bg-white/5 border-white/10 border rounded-2xl p-6">
-        <p className="font-bold text-xl mb-4">Work Experience</p>
-        <div className="flex flex-col gap-6 relative ml-2">
-          <motion.div 
-            initial={{ scaleY: 0 }} 
-            whileInView={{ scaleY: 1 }} 
-            className="absolute w-[3px] h-20 bg-gradient-to-b from-blue-500 via-purple-500 to-red-500 left-[14px] top-2 bottom-2 origin-top"
-          />
-          
-          <div className="flex justify-between items-start z-10">
-            <div className="flex gap-4">
-              <img src={freelancer} className="size-7 rounded-full border-2 border-black" alt="Freelance" />
-              <div>
-                <p className="font-bold">MIT HUB</p>
-                <p className="text-sm text-neutral-400">BACKEND DEVELOPER</p>
-              </div>
-            </div>
-            <div className="text-xs text-neutral-500 mt-1">Oct 2025 - Now</div>
-          </div>
+        <p className="font-bold text-xl mb-6">Work Experience</p>
+        <div className="relative flex flex-col gap-7">
+          {/* timeline line */}
+          <div className="absolute left-[18px] top-3 bottom-6 w-px bg-linear-to-b from-white/40 via-white/20 to-transparent" />
 
-          <div className="flex justify-between items-start z-10 ">
-            <div className="flex gap-4">
-              <img src={jeesoc} className=" size-7 rounded-full border-2 border-black" alt="Jee Society" />
-              <div>
-                <p className="font-bold">Jee Society</p>
-                <p className="text-sm text-neutral-400">CMO (took startup from 0 - 10k $ revenue)</p>
+          {experiences.map((exp, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.6 }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+              className="relative z-10 flex gap-4"
+            >
+              {exp.logo ? (
+                <img
+                  src={exp.logo}
+                  alt={exp.company}
+                  className="size-9 shrink-0 rounded-full object-cover border border-white/20 bg-neutral-900"
+                />
+              ) : (
+                <div className="size-9 shrink-0 flex items-center justify-center rounded-full text-[11px] font-bold text-white border border-white/20 bg-linear-to-br from-blue-500 to-indigo-600">
+                  {exp.initials}
+                </div>
+              )}
+
+              <div className="flex-1 min-w-0">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-0.5 sm:gap-3">
+                  <div>
+                    <p className="font-bold leading-tight">{exp.role}</p>
+                    <p className="text-sm text-neutral-300">{exp.company}</p>
+                  </div>
+                  <div className="text-xs text-neutral-500 shrink-0 sm:text-right sm:whitespace-nowrap">
+                    <p>{exp.date} · {exp.duration}</p>
+                    <p>{exp.location}</p>
+                  </div>
+                </div>
+                <p className="text-sm text-neutral-400 mt-2">{exp.desc}</p>
               </div>
-            </div>
-            <div className="text-xs text-neutral-500 mt-1">Sep 2024 - Feb 2025</div>
-          </div>
+            </motion.div>
+          ))}
         </div>
       </div>
 
