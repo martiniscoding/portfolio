@@ -3,6 +3,7 @@ import { GoNorthStar } from "react-icons/go";
 import { motion } from "framer-motion";
 import { useScroll } from "./ScrollContext";
 import jeesoc from "../public/jeesoc.png";
+import mithub from "../public/mit-logo-voilet.png";
 import ingest from "../public/inngest.png"
 import { 
   SiReact, SiNextdotjs, SiTailwindcss, SiReactquery, SiFramer, SiRedux, SiShadcnui,
@@ -33,7 +34,8 @@ function Cards() {
       desc: "Scaling business operations and building systems that make the user experience better.",
     },
     {
-      initials: "MH",
+      logo: mithub,
+      logoClass: "object-contain p-1",
       role: "Backend Developer",
       company: "MIT Hub · Internship",
       date: "Nov 2025 - Feb 2026",
@@ -74,7 +76,7 @@ function Cards() {
                 <img
                   src={exp.logo}
                   alt={exp.company}
-                  className="size-9 shrink-0 rounded-full object-cover border border-white/20 bg-neutral-900"
+                  className={`size-9 shrink-0 rounded-full border border-white/20 bg-neutral-900 ${exp.logoClass || "object-cover"}`}
                 />
               ) : (
                 <div className="size-9 shrink-0 flex items-center justify-center rounded-full text-[11px] font-bold text-white border border-white/20 bg-linear-to-br from-blue-500 to-indigo-600">
