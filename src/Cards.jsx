@@ -55,12 +55,17 @@ function Cards() {
     },
     {
       logo: jeesoc,
-      role: "Chief Marketing Officer",
+      role: "Head of Growth",
       company: "JEEsociety · Full-time",
       date: "Aug 2024 - Apr 2025",
       duration: "9 mos",
       location: "Mumbai, India · Remote",
-      desc: "Took the ed-tech B2C startup from ₹0 to ₹15 lakhs in revenue.",
+      desc: "Took the ed-tech B2C startup from ₹0 to ₹15 lakhs in revenue in 4 months.",
+      bullets: [
+        "Spearheaded go-to-market (GTM) strategy for new educational products from ideation to launch.",
+        "Established mentor hiring and evaluation workflows to maintain consistent quality standards.",
+        "Drove strategic decisions across product development, pricing, marketing, and user acquisition.",
+      ],
     },
   ];
 
@@ -106,6 +111,16 @@ function Cards() {
                   </div>
                 </div>
                 <p className="text-sm text-neutral-400 mt-2">{exp.desc}</p>
+                {exp.bullets && (
+                  <ul className="flex flex-col gap-1 mt-2 text-sm text-neutral-400">
+                    {exp.bullets.map((point, j) => (
+                      <li key={j} className="flex gap-2">
+                        <span className="text-neutral-600 shrink-0">•</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </motion.div>
           ))}
