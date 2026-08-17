@@ -5,6 +5,7 @@ import { useScroll } from "./ScrollContext";
 import jeesoc from "../public/jeesoc.png";
 import mithub from "../public/mit-logo-voilet.png";
 import ingest from "../public/inngest.png"
+import orvinex from "../public/orvinex-mark.png";
 import { 
   SiReact, SiNextdotjs, SiTailwindcss, SiReactquery, SiFramer, SiRedux, SiShadcnui,
   SiExpress, SiNestjs, SiTrpc, SiMongodb, SiPostgresql, SiRedis, SiSocketdotio, SiWebrtc, 
@@ -24,6 +25,15 @@ function Cards() {
   );
 
   const experiences = [
+    {
+      logo: orvinex,
+      role: "Full Stack Developer",
+      company: "Orvinex Studios · Full-time",
+      date: "Jun 2026 - Present",
+      duration: "2 mos",
+      location: "Remote",
+      desc: "Building and shipping full-stack web applications end to end.",
+    },
     {
       logo: jeesoc,
       role: "Chief Marketing Officer",
