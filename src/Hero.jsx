@@ -32,8 +32,7 @@ function Hero() {
           <span>Singh</span>
         </div>
         <div className="pt-5 pr-5 w-full max-w-[720px] text-sm sm:text-base md:text-xl lg:text-2xl leading-relaxed text-neutral-200 whitespace-normal">
-         I can build a full stack application, integrate AI agents into it, scale it to a
-         million users, deploy it and make sure it never goes down — all this solo. And I
+         I can build a full stack application, integrate AI agents into it, deploy it and make sure it never goes down — all this solo. And I
          can <span className="text-white font-semibold">build and market</span> too: I took a
          company from <span className="text-white font-semibold">$0 to $10k</span> in revenue in
          just a few months, and I'm now leading my current company to
